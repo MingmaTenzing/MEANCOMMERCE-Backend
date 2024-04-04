@@ -1,15 +1,20 @@
+//required default
 const express = require("express");
 const app = express();
-const productsRoute = require("./routes/products");
-const port = 5000;
-const connectDB = require("./db/connect");
 require("dotenv").config();
+
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("hello world");
-});
+//routes
+const productsRoute = require("./routes/products");
+const categoriesRoute = require("./routes/categories");
 
+//port
+const port = 5000;
+
+//DB
+const connectDB = require("./db/connect");
+app.use("/api/v1/categories", categoriesRoute);
 app.use("/api/v1/products", productsRoute);
 
 const start = async () => {
