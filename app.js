@@ -1,16 +1,28 @@
+//required default
 const express = require("express");
 const app = express();
-const port = 5000;
+require("dotenv").config();
 
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("hello world");
-});
+//routes
+const productsRoute = require("./routes/products");
+const categoriesRoute = require("./routes/categories");
 
-const start = () => {
-  app.listen(port, () => {
-    console.log("listening on port " + port);
-  });
+//port
+const port = 5000;
+
+//DB
+const connectDB = require("./db/connect");
+app.use("/api/v1/categories", categoriesRoute);
+app.use("/api/v1/products", productsRoute);
+
+const start = async () => {
+  try {
+    await connectDB(process.env.MONGO_URI);
+    app.listen(port, () => console.log("listening on port " + port));
+  } catch (error) {
+    console.log(error);
+  }
 };
 start();
