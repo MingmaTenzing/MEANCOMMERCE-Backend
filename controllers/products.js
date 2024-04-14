@@ -2,6 +2,9 @@ const getAllProducts = (req, res) => {
   res.send("all products page");
 };
 
+const uploadProduct = (req, res) => {
+  console.log(req.body);
+};
 const smartPhone = (req, res) => {
   res.send("SmartPhone Category");
 };
@@ -25,4 +28,5 @@ module.exports = {
   accesssories,
   headPhones,
   getAllProducts,
+  uploadProduct,
 };
