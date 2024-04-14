@@ -8,9 +8,10 @@ const {
   computers,
   accesssories,
   gamingConsoles,
+  uploadProduct,
 } = require("../controllers/products");
 
-router.route("/").get(getAllProducts);
+router.route("/").get(getAllProducts).post(uploadProduct);
 router.route("/smartphones").get(smartPhone);
 router.route("/headphones").get(headPhones);
 router.route("/computers").get(computers);
