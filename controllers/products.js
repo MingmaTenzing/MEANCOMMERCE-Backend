@@ -1,11 +1,12 @@
 const product = require("../models/product");
 const Product = require("../models/product");
+const products = require("../products.json");
 const getAllProducts = (req, res) => {
   res.send("all products page");
 };
 
 const uploadProduct = async (req, res) => {
-  const product = await Product.create(req.body);
+  const product = await Product.create(products);
   res.status(200).json({
     product,
   });
