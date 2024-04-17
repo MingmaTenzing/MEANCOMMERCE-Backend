@@ -9,6 +9,20 @@ const productSchema = new mongoose.Schema({
     type: Number,
     required: [true, "please provide the price"],
   },
+  category: {
+    type: String,
+    enum: [
+      "Computer & Laptop",
+      "Smartphone",
+      "Headphone",
+      "Accessories",
+      "Camera",
+      "TV",
+    ],
+    message: "{VALUE} is not acceptable",
+
+    required: true,
+  },
   featured: {
     type: Boolean,
     default: false,
