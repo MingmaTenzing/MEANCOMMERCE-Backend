@@ -1,0 +1,212 @@
+[
+ {
+    "name": "JBL Tune 510 Wireless ON Ear Headphones Black",
+    "price":49,
+    "featured": true,
+    "description":"The Tune 510BT wireless headphones feature renowned JBL Pure Bass sound, which can be found in the most famous venues all around the world. With Wireless Bluetooth 5.0 Streaming, you can stream wirelessly from your device and even switch between two devices so that you don't miss a call",
+    "rating":4.4,
+    "brand":"JBL",
+    "category": "Headphone",
+    "images": ["https://m.media-amazon.com/images/I/61xKBq7lUwL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/61567V7b75S._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/61eQTyggHXS._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/61oGbRI-gIS._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/51Bb0eFN7jS._AC_SY355_.jpg"]
+    
+},
+ {
+    "name": "Sony WH-1000XM5 Industry Leading Noise Cancelling Wireless Headphones, Hi-Res Audio, Best Phone Call Quality, 30 Hours Battery Life, Wearing Detection, Alexa Voice Assistant, Multipoint - Black",
+    "price":488,
+    "featured": true,
+    "description":"Industry-leading noise cancellation using 8 microphones and Auto NC Optimizer. All new lightweight design with soft fit leather.Superlative sound with precision-engineered 30mm drivers. Superior call quality with four beamforming microphones and AI-based noise reduction algorithm",
+    "rating":4.5,
+    "brand":"Sony",
+    "category": "Headphone",
+    "images":["https://m.media-amazon.com/images/I/61BP0d2-0AL._AC_SY450_.jpg", "https://m.media-amazon.com/images/I/51SMW7+3dwL._AC_SY450_.jpg", "https://m.media-amazon.com/images/I/61SvQdmmuhL._AC_SY450_.jpg", "https://m.media-amazon.com/images/I/61G3B1sz-uL._AC_SY450_.jpg", "https://m.media-amazon.com/images/I/71JBsjsRC5L._AC_SY679_.jpg"] 
+},
+ {
+    "name": "DOQAUS Bluetooth Headphones Over Ear, 90Hrs Playtime, Bluetooth5.3 Wireless Headphones with 3 EQ Mode, Hi-Fi Stereo Sound, Comfortable Earpads, Headphones Wireless for Cellphone PC Travel(Shadow Grey)",
+    "price":49,
+    "featured": false,
+    "description":"【up to 90 hours in wired mode】: Listen to music or chat with friends for 90 hours on a single charge. With 3.5mm audio cable, DOQAUS wireless headset can be used as a wired headset. Never worry about the battery running out. (Note: The headset button does not work in wired mode. You need to adjust the volume and mute songs from your phone)",
+    "rating":4.5,
+    "brand":"DOQUAS",
+    "category": "Headphone",
+"images":["https://m.media-amazon.com/images/I/61Tyn0vlpEL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/81dT-+xWxnL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/71KoH62dKVL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/712T1rnghQL._AC_SY355_.jpg"]
+},
+ {
+    "name": "DOQAUS Bluetooth Headphones Over Ear, 90Hrs Playtime, Bluetooth5.3 Wireless Headphones with 3 EQ Mode, Hi-Fi Stereo Sound, Comfortable Earpads, Headphones Wireless for Cellphone PC Travel(Shadow Grey)",
+    "price":49,
+    "featured": false,
+    "description":"【up to 90 hours in wired mode】: Listen to music or chat with friends for 90 hours on a single charge. With 3.5mm audio cable, DOQAUS wireless headset can be used as a wired headset. Never worry about the battery running out. (Note: The headset button does not work in wired mode. You need to adjust the volume and mute songs from your phone)",
+    "rating":4.5,
+    "brand":"DOQUAS",
+    "category": "Headphone",
+"images":["https://m.media-amazon.com/images/I/61Tyn0vlpEL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/81dT-+xWxnL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/71KoH62dKVL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/712T1rnghQL._AC_SY355_.jpg"]
+},
+ {
+    "name": "Sony WH-CH520 Wireless Headphones, Light Comfortable, on-Ear Style, Clear Voice Calls, 50 Hours Battery Life, Quick Charge, Multipoint, White",
+    "price":78,
+    "featured": true,
+    "description":"Lightweight on-ear Bluetooth headphones Multipoint connectivity and clear voice calls DSEE music-upscaling for better sounding music Sony Headphones Connect companion app for EQ adjustment and more", 
+       "rating":4.5,
+    "brand":"Sony",
+    "category": "Headphone",
+"images":["https://m.media-amazon.com/images/I/515KTe4ll2L._AC_SY550_.jpg", "https://m.media-amazon.com/images/I/51tSSgLU0LL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/51y8Y1-ozAL._AC_SY450_.jpg", "https://m.media-amazon.com/images/I/61sDqEQNnAL._AC_SX355_.jpg"]
+},
+ {
+    "name": "Sony WH-CH520 Wireless Headphones, Light Comfortable, on-Ear Style, Clear Voice Calls, 50 Hours Battery Life, Quick Charge, Multipoint, White",
+    "price":78,
+    "featured": true,
+    "description":"Lightweight on-ear Bluetooth headphones Multipoint connectivity and clear voice calls DSEE music-upscaling for better sounding music Sony Headphones Connect companion app for EQ adjustment and more", 
+       "rating":4.5,
+    "brand":"Sony",
+    "category": "Headphone",
+"images":["https://m.media-amazon.com/images/I/515KTe4ll2L._AC_SY550_.jpg", "https://m.media-amazon.com/images/I/51tSSgLU0LL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/51y8Y1-ozAL._AC_SY450_.jpg", "https://m.media-amazon.com/images/I/61sDqEQNnAL._AC_SX355_.jpg"]
+},
+ {
+    "name": "Beats Studio3 Wireless Noise Cancelling Over-Ear Headphones - Apple W1 Headphone Chip, Class 1 Bluetooth, Active Noise Cancelling, 22 Hours of Listening Time, Built-in Microphone - Shadow Grey",
+    "price":279,
+    "featured": false,
+    "description":"High-performance wireless noise cancelling headphones. Compatible with iOS and Android devices. Apple's W1 chip and industry-leading Bluetooth technology keep you connected farther with fewer drop-outs ",
+          "rating":4.6,
+    "brand":"Beats",
+    "category": "Headphone",
+    "images": ["https://m.media-amazon.com/images/I/61DqKs7xflL._AC_SX466_.jpg", "https://m.media-amazon.com/images/I/619R0fYCvtL._AC_SX466_.jpg", "https://m.media-amazon.com/images/I/51CknlEdxSL._AC_SX466_.jpg", "https://m.media-amazon.com/images/I/61CqagfrdiL._AC_SX466_.jpg", "https://m.media-amazon.com/images/I/61P5rtbty6L._AC_SX466_.jpg"]
+
+}, 
+ {
+    "name": "Apple EarPods with Lightning Connector",
+    "price":29,
+    "featured": true,
+    "description":"Compatible with iPad Models: iPad Pro 12.9-inch (2nd generation), iPad Pro 12.9-inch (1st generation), iPad Pro 10.5-inch, iPad Pro 9.7-inch, iPad Air (3rd generation), iPad Air 2, iPad Air (1st generation), iPad (9th generation), iPad (8th generation), iPad (7th generation), iPad (6th generation), iPad (5th generation), iPad mini (5th generation), iPad mini 4, iPad mini 3, iPad mini 2, iPad mini (1st generation); iPod Models: iPod touch (7th generation), iPod touch (6th generation)",
+        "rating":4.6,
+    "brand":"Apple",
+    "category": "Headphone",
+    "images":["https://m.media-amazon.com/images/I/41GwLXE15GL._AC_SX466_.jpg", "https://m.media-amazon.com/images/I/41IPan5QUvL._AC_SX466_.jpg", "https://m.media-amazon.com/images/I/41pXNUBB+xL._AC_SX466_.jpg", "https://m.media-amazon.com/images/I/41P4O8n8RqL._AC_SX466_.jpg"]
+}, 
+ {
+    "name": "Bose QuietComfort 45 Noise Cancelling Headphones with Built-in Microphone for Clear Calls and Alexa Voice Control, Black",
+    "price":279,
+    "featured": false,
+    "description":"Noise cancelling wireless headphones – The perfect balance of quiet, comfort, and sound. Bose uses tiny mics to measure, compare, and react to outside noise, cancelling it with opposite signals. High-fidelity audio – The TriPort acoustic architecture offers depth and fullness. Volume-optimized Active EQ maintains balanced performance at any volume, so bass stays consistent when turned down and the music remains clear when turned up.",
+            "rating":4.6,
+    "brand":"Bose",
+    "category": "Headphone",
+    "images":["https://m.media-amazon.com/images/I/51Ltm3tbH2L._AC_SY450_.jpg", "https://m.media-amazon.com/images/I/61lGWbYI8fL._AC_SY450_.jpg", "https://m.media-amazon.com/images/I/51VAKA+kGVL._AC_SY450_.jpg", "https://m.media-amazon.com/images/I/71eQCHyaHSL._AC_SY450_.jpg"]
+
+},
+
+ {
+    "name": "JBL C50HI Wired in Ear Headphones Black",
+    "price":9,
+    "featured": true,
+    "description":"Lightweight and comfortable: The 3 sizes of ear tips (S,M,L) that are included allow you to choose a size that gives you the most comfortable listening experience even for longer listening periods. High Clean Bass. Troubleshooting steps : Kindly ensure 3.5mm port on Host device is clean and dust free and 3.5mm jack of the earphone is adequately inserted inside the input device port",
+    "rating":4.2,
+    "brand":"JBL",
+    "category": "Headphone",
+    "images":["https://m.media-amazon.com/images/I/61bKM6CSSFL._AC_SX522_.jpg", "https://m.media-amazon.com/images/I/61ZGqd+HeLL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/71JgcqymbjL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/71O2QHHIT0L._AC_SY355_.jpg"]
+},
+ {
+    "name": "Anker soundcore Life Q30 Hybrid Active Noise Cancelling Headphones with Multiple Modes, Hi-Res Sound, 40H Playtime, Fast Charge, Soft Earcups, Bluetooth Headphones, Travel",
+    "price":129,
+    "featured": false,
+    "description":"Advanced Noise Cancellation Technology: Maintain your focus with Life Q30’s hybrid active noise cancellation. Dual noise-detecting microphones pick up and filter out up to 95% of low-frequency ambient sound to ensure nothing distracts you from your music. Hi-Res Music: Hear every detail of your favorite songs thanks to Life Q30’s 40mm drivers. The highly-flexible silk diaphragms reproduce thumping bass and crisp treble that extends up to 40kHz for improved clarity.",
+        "rating":4.4,
+    "brand":"Anker",
+    "category": "Headphone",
+    "images": ["https://m.media-amazon.com/images/I/61l8-Y6+9IL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/71td6PxaFNL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/71Ddmew6EKL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/71HOonxIAqL._AC_SY355_.jpg"]
+    
+},
+ {
+    "name": "Apple AirPods Max - Green",
+    "price":758,
+    "featured": true,
+    "description":"Apple-designed dynamic driver provides high-fidelity audio. Active Noise Cancellation blocks outside noise, so you can immerse yourself in music. Transparency mode for hearing and interacting with the world around you, Spatial audio with dynamic head tracking provides cinema-like sound that surrounds you",
+            "rating":4.6,
+    "brand":"Apple",
+    "category": "Headphone",
+    "images":["https://m.media-amazon.com/images/I/81zopN-gT9L._AC_SX466_.jpg", "https://m.media-amazon.com/images/I/81S7RIvNQML._AC_SX466_.jpg", "https://m.media-amazon.com/images/I/71QOQTBX82L._AC_SX466_.jpg", "https://m.media-amazon.com/images/I/81hkMBL+koL._AC_SX466_.jpg", "https://m.media-amazon.com/images/I/91yCzuc91hL._AC_SX466_.jpg"]
+},
+ {
+    "name": "JBL Tune 110 Wired in Ear Headphones Black",
+    "price":14,
+    "featured": false,
+    "description":"JBL Legendary Sound- Experience superior JBL sound with powerful bass that truly packs a punch. The tangle-free flat cable is lightweight and features user-friendly controls for easy functioning and ensures better longevity. Lightweight and comfortable ear tips which is available in 3 sizes, provides you the most comfortable musical experience for longer listening periods",
+            "rating":4.3,
+    "brand":"JBL",
+    "category": "Headphone",
+    "images":["https://m.media-amazon.com/images/I/415tPIP3TkL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/41XdJaDd9aL._AC_SY355_.jpg"]
+
+},
+ {
+    "name": "EarFun Air Pro 3 Noise Cancelling Wireless Earbuds, Qualcomm® aptX™ Adaptive Sound, 6 Mics CVC 8.0 ENC, Bluetooth 5.3 TWS Earbuds Wireless, Multipoint Connection, 45H Playtime, App Customize EQ, Black",
+    "price":99,
+    "featured": true,
+    "description":"🏅[𝗩𝗚𝗣 𝟮𝟬𝟮𝟯 𝗚𝗼𝗹𝗱 𝗔𝘄𝗮𝗿𝗱 & 𝗤𝘂𝗮𝗹𝗰𝗼𝗺𝗺 𝗟𝗮𝘁𝗲𝘀𝘁 𝗖𝗵𝗶𝗽 𝗤𝗖𝗖𝟯𝟬𝟳𝟭] EarFun Air Pro 3 noise cancelling earbuds has won the VGP 2023 Gold Award, Japan's biggest audio-visual award, with high praise. 👍 It features the cutting-edge Qualcomm chip QCC3071, supporting high-resolution (24bit/96kHz) aptX Adaptive codec for superior sound quality. Bluetooth 5.3 provides stable connections, and aptX Adaptive adjusts bit-rate according to the listening environment, delivering optimal music playback constantly. Equipped with an 11mm wool dynamic driver, it reproduces a balanced sound from powerful bass to smooth mid-high to deliver a sound closer to the original.",
+         "rating":4.4,
+    "brand":"EarFun",
+    "category": "Headphone",
+    "images": ["https://m.media-amazon.com/images/I/61dDIKxp6sL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/71paJQJBbGL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/71vLKhd9T8L._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/71sVFXW3hHL._AC_SY355_.jpg"]
+},
+{
+    "name": "EarFun Free Pro 3 Noise Canceling Wireless Earbuds, Hi-Res AUDIO WIRELESS Certification, Snapdragon Sound with Qualcomm aptX™ Adaptive, 6 Mics ENC Bluetooth Earbuds, Multipoint Connection, Brown Black",
+    "price":199,
+    "featured": true,
+    "description":"🏅【Snapdragon Sound & Hi-Res Sound & aptX Adaptive Audio】The EarFun Free Pro 3 wireless earbuds adopt the latest advanced Qualcomm QCC3072 chip, new Snapdragon Sound Technology, and aptX adaptive audio to deliver a dynamic yet balanced audio experience. Our true wireless earbuds get Hi-Res AUDIO WIRELESS certification, providing a transfer rate of up to 24bit/96kHz, achieving lossless transfer while delivering high fidelity.",
+         "rating":4.5,
+    "brand":"EarFun",
+    "category": "Headphone",
+    "images":["https://m.media-amazon.com/images/I/616yURGRrwL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/71VKf4s5FKL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/71GLp1KgG3L._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/71ptiUkNuqL._AC_SY355_.jpg"]
+
+},
+{
+    "name": "EarFun Air S Active Noise Cancelling Wireless Earbuds New Year Gifts, Qualcomm aptX Audio Bluetooth Earphones, 4 Mics CVC 8.0 Clear Call, Multipoint Connection Earbuds, App Control, Game Mode, Black",
+    "price":79,
+    "featured": false,
+    "description":"🎵Sound That Rocks:🎵 EarFun Air S - 🥇CNET Best Budget Noise Cancelling Earbuds🥇The true wireless earbuds equipped with Qualcomm aptX audio technology and 10mm wool composite dynamic drivers deliver balanced sound, with rich bass, stunning treble, and clear mids that gives life to your music, creating your own personal concert.",
+    "rating":4.5,
+    "brand":"EarFun",
+    "category": "Headphone",
+    "images":["https://m.media-amazon.com/images/I/612z15bI+aL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/71yKtTXIOAL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/7163TKNU6cL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/717QLrLM3aL._AC_SY355_.jpg"]
+},
+{
+    "name": "Samsung Galaxy Buds2 Pro, Graphite",
+    "price":184,
+    "featured": true,
+    "description":"Comfortable design: So comfortable you can barely feel them; Whether you’re out for a run or winding down a movie, the ultra-compact Galaxy Buds2 Pro are built for extra comfort;2 It comes in a smooth design to enhance listening and calling, and an acoustic mesh to help minimise unwanted noise",
+    "rating":4.5,
+    "brand":"Samsung",
+    "category": "Headphone",
+    "images":["https://m.media-amazon.com/images/I/61Qqg+T8nsL._AC_SX355_.jpg", "https://m.media-amazon.com/images/I/51prSg7iylL._AC_SX355_.jpg", "https://m.media-amazon.com/images/I/81ZnkXiV6EL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/61vvAjoGV7L._AC_SY355_.jpg"]
+
+},
+{
+    "name": "JBL Wave Bud True Wireless Stereo Earbuds, Black",
+    "price":79,
+    "featured": true,
+    "description":"The bud design gently seals your ears blocking external noises and enhancing the bass performance. Hands-free calls with VoiceAware. With 8 hours of battery life in the earbuds and 24 in the case",   
+     "rating":4.5,
+    "brand":"JBL",
+    "category": "Headphone",
+    "images":["https://m.media-amazon.com/images/I/51lhZsdupGL._AC_SY450_.jpg", "https://m.media-amazon.com/images/I/61lX96Y8SnL._AC_SY450_.jpg", "https://m.media-amazon.com/images/I/71EilzL89NL._AC_SY450_.jpg", "https://m.media-amazon.com/images/I/71P7I72p4xL._AC_SY450_.jpg"]
+},
+{
+    "name": "Sony WF-C700N Wireless, Bluetooth, Noise Cancelling Earbuds, Black (Small, Lightweight Earbuds with Multi-Point Connection, IPX4 rating, up to 20 HR)",
+    "price":139,
+    "featured": true,
+    "description":"Truly Wireless Headphones with Noise Cancelling. Natural Ambient Sound helps you remain aware of your surroundings.IPX4 splash-resistant, with a colourful and lightweight go-anywhere design. Up to 7.5 hours music per charge, 15 hours with the charging case ",
+       "brand":"Sony",
+            "rating":4.1,
+            "category": "Headphone",
+    "images":["https://m.media-amazon.com/images/I/41l+GRy9UsL._AC_SY450_.jpg", "https://m.media-amazon.com/images/I/91hmimBrEiL._AC_SY450_.jpg", "https://m.media-amazon.com/images/I/810-4P5R55L._AC_SY450_.jpg", "https://m.media-amazon.com/images/I/71GPIykwhNL._AC_SY450_.jpg"]
+
+},
+{
+    "name": "Apple AirPods (3rd Generation)",
+    "price":288,
+    "featured": true,
+    "description":"Spatial audio with dynamic head tracking places sound all around you. Adaptive EQ automatically tunes music to your ears. Force sensor lets you easily control your entertainment, answer or end calls, and more",
+           "brand":"Apple",
+    "category": "Headphone",
+    "rating":4.6,
+    "images":["https://m.media-amazon.com/images/I/615ekapl+pL._AC_SX466_.jpg", "https://m.media-amazon.com/images/I/61EcSkrkl2L._AC_SX466_.jpg", "https://m.media-amazon.com/images/I/81ilB-UjbUL._AC_SX466_.jpg", "https://m.media-amazon.com/images/I/61csINpjQEL._AC_SX466_.jpg", "https://m.media-amazon.com/images/I/61ZvNJ-b+KL._AC_SX466_.jpg"]
+}
+
+]
