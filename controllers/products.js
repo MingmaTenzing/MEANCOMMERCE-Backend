@@ -2,8 +2,9 @@ const product = require("../models/product");
 const Product = require("../models/product");
 const products = require("../computer-laptop.json");
 const smartphones = require("../smartphone.json");
-const getAllProducts = (req, res) => {
-  res.send("all products page");
+const getAllProducts = async (req, res) => {
+  const products = await Product.find({});
+  res.json(products);
 };
 
 const uploadProduct = async (req, res) => {
