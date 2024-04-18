@@ -1,15 +1,17 @@
 const product = require("../models/product");
 const Product = require("../models/product");
-const products = require("../products.json");
+const products = require("../computer-laptop.json");
+const smartphones = require("../smartphone.json");
 const getAllProducts = (req, res) => {
   res.send("all products page");
 };
 
 const uploadProduct = async (req, res) => {
-  const product = await Product.create(products);
-  res.status(200).json({
-    product,
-  });
+  // const product = await Product.create(smartphones);
+  // res.status(200).json({
+  //   product,
+  // });
+  // res.json({ product });
 };
 const smartPhone = (req, res) => {
   res.send("SmartPhone Category");

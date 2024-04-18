@@ -1,0 +1,135 @@
+[
+     {
+    "name": "Samsung Galaxy S24 AI Smartphone, 8GB RAM 256GB, Onyx Black",
+    "price":1399,
+    "featured": true,
+    "description": "Leap into a new era of smartphone technology on the new Galaxy S24 Series. Do more effortlessly with AI-assisted features including Live Translate(1), Photo Assist and Note Assist(2). Introducing Circle to Search(3) with Google on the new Galaxy S24 Series. Explore a new way to search for your favourite outfit, celebrity or landmark. Simply circle your desired object in virtually any screen and let this ultimate way of search provide you with related content and information, just like that.",
+    "rating":3.8,
+    "brand":"Samsung",
+    "category": "Smartphone",
+    "images": ["https://m.media-amazon.com/images/I/61p5lIwO04L._AC_SX679_.jpg", "https://m.media-amazon.com/images/I/61tMpgUqLNL._AC_SX679_.jpg", "https://m.media-amazon.com/images/I/81U4lYEdCGL._AC_SX679_.jpg", "https://m.media-amazon.com/images/I/71E47meT1DL._AC_SX679_.jpg"]
+     },
+     {
+         "name": "Motorola G14 4/128GB Pale Lilac",
+    "price":199,
+    "featured": false,
+    "description": "With an incredibly sharp 6.5 Full HD+ display, the new moto g14 brings movies, shows, games, and video calls to life with picture perfect clarity. The same goes for sound and photos. Hear and feel crystal-clear audio from every direction with stereo speakers and Dolby Atmos. And capture beautifully detailed photos day or night with an advanced 50MP camera system",
+    "rating":4.5,
+    "brand":"Motorola",
+    "category": "Smartphone",
+    "images": ["https://m.media-amazon.com/images/I/61p5lIwO04L._AC_SX679_.jpg", "https://m.media-amazon.com/images/I/61tMpgUqLNL._AC_SX679_.jpg", "https://m.media-amazon.com/images/I/81U4lYEdCGL._AC_SX679_.jpg", "https://m.media-amazon.com/images/I/71E47meT1DL._AC_SX679_.jpg"]
+
+     },
+     {
+         "name": "HONOR 90 Smartphone 5G, 200MP Triple Camera, 6,7” Curved AMOLED 120Hz Display, 8GB+256GB, 5000mAh Battery, Supercharge 66 W, Dual SIM, Android 13, Midnight Black",
+    "price":576,
+    "featured": true,
+    "description":"【6.7-inch 120Hz AMOLED Display】Equipped with a 6.7-inch quad-curved bezel-less display, HONOR 90 supports a high resolution of 2664x1200, 100% DCI-P3 color gamut, up to 1.07 billion colors, and a peak HDR brightness of 1600 nits, bringing visual content to life in stunning colors and vivid clarity",
+      "rating":4.4,
+    "brand":"HONOR",
+    "category": "Smartphone",
+    "images":["https://m.media-amazon.com/images/I/711jzJkvDLL._AC_SX679_.jpg", "https://m.media-amazon.com/images/I/71DhMnzBGPL._AC_SX679_.jpg", "https://m.media-amazon.com/images/I/71OEzMQ5qlL._AC_SX679_.jpg"]
+
+     },
+     {
+         "name": "Samsung Galaxy S24 Ultra AI Smartphone, 12GB RAM 512GB, Titanium Grey", 
+         "price":2387,
+    "featured": true,
+    "description":"Be your most productive self and make your long stories short with Note Assist(5), thanks to AI. Forget about feeling overwhelmed with information when you can table your notes or shopping list, and summarise your points before sharing with colleagues or responding to emails.",
+      "rating":5,
+    "brand":"Samsung",
+    "category": "Smartphone",
+    "images": ["https://m.media-amazon.com/images/I/71dCKcwMZiL._AC_SX679_.jpg", "https://m.media-amazon.com/images/I/71AS6kYS7xL._AC_SX679_.jpg", "https://m.media-amazon.com/images/I/81ehRNWSmGL._AC_SX679_.jpg", "https://m.media-amazon.com/images/I/71T09LOL6XL._AC_SX679_.jpg"]
+     },
+     {
+         "name": "Redmi Xiaomi 13C 4G Midnight Black 6.74 50MP Triple Camera (128GB + 4GB)", 
+       
+         "price":249,
+    "featured": false,
+    "description":"6.745 HD+ Display 90HZ 50MP Triple Camera 8MP Front Camera 4GB + 128GB MTK G85 Chipset 18W fast charging 5000mAh Battery IP52 splash-proof FM Radio Finger unlock face unlock NFC Rhine Eye Care Certification",      
+    "rating":5,
+    "brand":"Xiaomi",
+    "category": "Smartphone",
+    "images":["https://m.media-amazon.com/images/I/61h5FYFKueL._AC_SX679_.jpg", "https://m.media-amazon.com/images/I/61ByxgnSn-L._AC_SX679_.jpg", "https://m.media-amazon.com/images/I/51IlA8H9SYL._AC_SX679_.jpg", "https://m.media-amazon.com/images/I/41hYt497dTL._AC_SX679_.jpg"] },
+ {
+"name": "Xiaomi Redmi 12 Midnight Black", 
+"price":252,
+"featured": false,
+  "description":"6.79 FHD+ DotDisplay2460x1080, 396 ppiContrast ratio: 1500:1Color gamut: 70% NTSCBrightness: up to 550 nits (HBM)AdaptiveSync display: 36Hz/48Hz/60Hz/90HzSupports readming mode 3.0SGS Low Blue Light Certification",
+"rating":5,
+"brand":"Xiaomi",
+"category": "Smartphone",
+"images":["https://m.media-amazon.com/images/I/51jbajB0a+L._AC_SX679_.jpg", "https://m.media-amazon.com/images/I/41zijzkVOeL._AC_SX679_.jpg", "https://m.media-amazon.com/images/I/41pPS3thg9L._AC_SX679_.jpg"]
+},
+{
+         "name": "Apple iPhone 15 Pro Max (256 GB) - Blue Titanium",
+    "price":2187,
+    "featured": true,
+    "description":"FORGED IN TITANIUM — iPhone 15 Pro Max has a strong and light aerospace-grade titanium design with a textured matte-glass back. It also features a Ceramic Shield front that’s tougher than any smartphone glass. And it’s splash, water, and dust resistant.",
+      "rating":4.7,
+    "brand":"Apple",
+    "category": "Smartphone",
+    "images":["https://m.media-amazon.com/images/I/81fxjeu8fdL._AC_SX679_.jpg", "https://m.media-amazon.com/images/I/61HZS-ZSCLL._AC_SX679_.jpg", "https://m.media-amazon.com/images/I/71TSx9D2BVL._AC_SX679_.jpg", "https://m.media-amazon.com/images/I/61pXO8SdASL._AC_SX679_.jpg"]
+     },
+{
+         "name": "Nothing Phone (2) - 12 GB RAM + 256GB, Glyph Interface, Nothing OS 2.0, 50 MP Dual Camera, 6.7” LTPO AMOLED Display, 4700 mAh Battery, Water Resistant, 5G Unlocked Android Smartphone, Dark Gray",
+    "price":1162,
+    "featured": true,
+    "description":"We’ve reimagined home and lock screen utility so you can shortcut to apps without getting distracted. Customise everything from app labels and grid design to widget size and colour themes. Now with new folder layouts and illustrated covers. Your phone, your way. For a faster, more intuitive experienc",
+    "rating":4.6,
+    "brand":"Nothing",
+    "category": "Smartphone",
+    "images":["https://m.media-amazon.com/images/I/71x5ntU43-L._AC_SX679_.jpg", "https://m.media-amazon.com/images/I/71Ot1xZcmjL._AC_SY879_.jpg", "https://m.media-amazon.com/images/I/71r69j9T+sL._AC_SY879_.jpg"]
+
+},
+{
+         "name": "Google Pixel 7a 5G GHL1X 128GB + 8GB RAM Factory Unlocked Android Smartphone (Sea)",
+    "price":546,
+    "featured": true,
+    "description":"We’ve reimagined home and lock screen utility so you can shortcut to apps without getting distracted. Customise everything from app labels and grid design to widget size and colour themes. Now with new folder layouts and illustrated covers. Your phone, your way. For a faster, more intuitive experienc",
+    "rating":4.2,
+    "brand":"Google",
+    "category": "Smartphone",
+    "images":["https://m.media-amazon.com/images/I/61vKFX+KchL._AC_SX679_.jpg", "https://m.media-amazon.com/images/I/31nOM+TRfTL._AC_.jpg", "https://m.media-amazon.com/images/I/31LT7fMsriL._AC_.jpg", "https://m.media-amazon.com/images/I/314sS-ai+YL._AC_SX679_.jpg" ]
+},
+{
+         "name": "Apple iPhone 13 (128GB) - Midnight",
+    "price":1087,
+    "featured": true,
+    "description":"6.1-inch Super Retina XDR display. Advanced dual-camera system with 12MP Wide and Ultra Wide cameras; Photographic Styles, Smart HDR 4, Night mode, 4K Dolby Vision HDR recording.",
+    "rating":4.8,
+    "brand":"Apple",
+    "category": "Smartphone",
+"images": ["https://m.media-amazon.com/images/I/618EcALDM3L._AC_SX679_.jpg", "https://m.media-amazon.com/images/I/61IYMK5WR6L._AC_SX679_.jpg", "https://m.media-amazon.com/images/I/71RJNTXEDuL._AC_SX679_.jpg", "https://m.media-amazon.com/images/I/71ULlbVChSL._AC_SX679_.jpg"]
+},
+{
+         "name": "Apple iPhone 14 (256 GB) - Starlight",
+    "price":1499,
+    "featured": true,
+    "description":"6.1-inch Super Retina XDR display. Advanced camera system for better photos in any light. Cinematic mode now in 4K Dolby Vision up to 30 fps. Action mode for smooth, steady, handheld videos ",
+        "rating":4.8,
+    "brand":"Apple",
+    "category": "Smartphone",
+"images": ["https://m.media-amazon.com/images/I/618Bb+QzCmL._AC_SX679_.jpg", "https://m.media-amazon.com/images/I/512Wg9SvQsL._AC_SX679_.jpg", "https://m.media-amazon.com/images/I/718muFN+T+L._AC_SX679_.jpg", "https://m.media-amazon.com/images/I/713C6WEqyKL._AC_SX679_.jpg"]
+},
+{
+         "name": "Apple iPhone 12 Red 128GB (MGHW3J/A) (Renewed)",
+    "price":529,
+    "featured": false,
+    "description":"This pre-owned product is not Apple certified, but has been professionally inspected, tested and cleaned by Amazon-qualified suppliers.- Product will come with a SIM removal tool, a charger and a charging cable. Headphones and SIM card are not included.",
+        "rating":4,
+    "brand":"Apple",
+    "category": "Smartphone",
+"images":["https://m.media-amazon.com/images/I/61dIxJT95NL._AC_SX679_.jpg", "https://m.media-amazon.com/images/I/61HGEFBKprL._AC_SX679_.jpg"]
+},
+{
+         "name": "Apple iPhone 14 Pro (512 GB) - Deep Purple",
+    "price":2411,
+    "featured": true,
+    "description":"6.1-inch Super Retina XDR display featuring Always-On and ProMotion. Dynamic Island, a magical new way to interact with iPhone. 48MP Main camera for up to 4x greater resolution. Cinematic mode now in 4K Dolby Vision up to 30 fps ",
+          "rating":4.7,
+    "brand":"Apple",
+    "category": "Smartphone",
+"images":["https://m.media-amazon.com/images/I/61HHS0HrjpL._AC_SX679_.jpg","https://m.media-amazon.com/images/I/61JprYdpMmL._AC_SX679_.jpg", "https://m.media-amazon.com/images/I/71pOW6LpyfL._AC_SX679_.jpg", "https://m.media-amazon.com/images/I/91Qil-6Kq8L._AC_SX679_.jpg"]
+}
+]
