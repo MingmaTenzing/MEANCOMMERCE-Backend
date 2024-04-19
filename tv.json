@@ -1,0 +1,65 @@
+[
+     {
+    "name": "Konka KDE40RR315ANT 40inch Android Smart TV",
+       "price":279,
+    "featured": true,
+    "description": "A+ Grade panel, no defect dot. Android 11 Chromcast Built in.WIFI 2.4G/5G & BLUETOOTH. 1.5G RAM,8G Emmc Storage. HBBTV, Youtube, Netflix, Stan, Prime Video, Kayo etc.",
+         "rating":5,
+    "brand":"Konka",
+    "category": "TV",
+    "images":["https://m.media-amazon.com/images/I/61v2VJiX63L._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/61rPQUE4pGL._AC_SX355_.jpg", "https://m.media-amazon.com/images/I/51NZPaub5hL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/71fX7SxZJBL._AC_SY355_.jpg"]
+
+},
+     {
+    "name": "Sony Bravia 55-Inch X80L LED 4K Smart Google TV – 2023 Model (KD55X80L)",
+    "price":1121,
+    "featured": true,
+    "description": "4K HDR Processor X1 brings scenes vividly to life so everything feels real. With triluminos pro and a wide colour panel. Uniquely-shaped x-balanced speaker drives movies and music with clear sound and rich bass. Brightness optimised and tuned to your room with ambient optimisation ",
+          "rating":5,
+    "brand":"Sony",
+    "category": "TV",
+    "images":["https://m.media-amazon.com/images/I/71Xck8N6JXL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/81DoLHIsrDL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/81zB6gUyOuL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/91zJNO9KbzL._AC_SY355_.jpg"]
+},
+     {
+    "name": "LG UR8050 55 inch 4K Smart UHD TV with Al Sound Pro",
+    "price":993,
+    "featured": true,
+    "description": "Vivid colour and remarkable detail with 4K HDR10 Pro,A smart viewing experience with α5 AI Processor 4K Gen6, Smart functionality, including ThinQ AI and WebOS. Streaming built-in, including LG Channels, Netflix, Apple TV+, and Disney+ ",
+              "rating":4.9,
+    "brand":"LG",
+    "category": "TV",
+    "images":["https://m.media-amazon.com/images/I/71hQq1ndVjL._AC_SX355_.jpg", "https://m.media-amazon.com/images/I/41fCLR-A-5L._AC_SX355_.jpg", "https://m.media-amazon.com/images/I/410WQ5wqekL._AC_SX355_.jpg", "https://m.media-amazon.com/images/I/310ajgmHr6L._AC_SX355_.jpg"]
+
+},
+     {
+    "name": "Philips 65-Inch 4K LED Android Smart TV | UHD & HDR10+ | 3-Sided Ambilight | Dolby Vision & Dolby Atmos | P5 Perfect Picture Engine | 65PUT8507/75",
+       "price":1595,
+    "featured": false,
+    "description": "Major HDR formats supported, P5 perfect picture engine. Cinematic vision and sound, Dolby vision and Dolby atmos.Voice control, the google assistant, works with Alexa ",
+    "rating":4.2,
+    "brand":"Philips",
+    "category": "TV",
+    "images":["https://m.media-amazon.com/images/I/614-BBE1ooL._AC_SX522_.jpg", "https://m.media-amazon.com/images/I/61AxWXrCPFL._AC_SX355_.jpg", "https://m.media-amazon.com/images/I/51OdBEHJCjL._AC_SY355_.jpg"]
+},
+     {
+    "name": "Apple 2022 Apple TV 4K Wi‑Fi + Ethernet with 128GB Storage (3rd Generation)",
+           "price":238,
+    "featured": true,
+    "description": "Major HDR formats supported, P5 perfect picture engine. Cinematic vision and sound, Dolby vision and Dolby atmos.Voice control, the google assistant, works with Alexa ",
+    "rating":4.8,
+    "brand":"Apple",
+    "category": "TV",
+    "images":["https://m.media-amazon.com/images/I/61HGvrbamzL._AC_SX342_.jpg", "https://m.media-amazon.com/images/I/71zfD7JIqOL._AC_SX342_.jpg", "https://m.media-amazon.com/images/I/710aSbpogRL._AC_SX342_.jpg"]
+
+},
+     {
+    "name": "Fire TV Stick 4k | Stream Prime Video, netflix, 9Now, 7plus",
+    "price":79,
+    "featured": true,
+    "description": "Major HDR formats supported, P5 perfect picture engine. Cinematic vision and sound, Dolby vision and Dolby atmos.Voice control, the google assistant, works with Alexa ",
+    "rating":4.7,
+    "brand":"Amazon",
+    "category": "TV",
+    "images":["https://m.media-amazon.com/images/I/51HlwgewMIL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/41BBpDQkp8L._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/61t8ZJwBiXL._AC_SX355_.jpg", "https://m.media-amazon.com/images/I/51FxLkbizjL._AC_SY355_.jpg"]
+}
+]
