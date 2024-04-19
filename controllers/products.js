@@ -1,6 +1,7 @@
 const Product = require("../models/product");
 const headphones = require("../headphone.json");
 const tv = require("../tv.json");
+const { StatusCodes } = require("http-status-codes");
 const camera = require("../camera.json");
 const getAllProducts = async (req, res) => {
   const products = await Product.find({});
@@ -9,7 +10,7 @@ const getAllProducts = async (req, res) => {
 
 const uploadProduct = async (req, res) => {
   const product = await Product.create(camera);
-  res.status(200).json({
+  res.status(StatusCodes.OK).json({
     product,
   });
   res.json({ product }); // const product = await Product.create(smartphones);
@@ -18,8 +19,9 @@ const uploadProduct = async (req, res) => {
   // });
   // res.json({ product });
 };
-const smartPhone = (req, res) => {
-  res.send("SmartPhone Category");
+const smartPhone = async (req, res) => {
+  const smartPhones = await Product.find({ category: "Smartphone" });
+  res.json(smartPhones);
 };
 const headPhones = (req, res) => {
   res.send("headphone Category");
