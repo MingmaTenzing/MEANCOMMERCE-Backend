@@ -1,9 +1,22 @@
-const getAllProducts = (req, res) => {
-  res.send("all products page");
+const Product = require("../models/product");
+const headphones = require("../headphone.json");
+const tv = require("../tv.json");
+const camera = require("../camera.json");
+const getAllProducts = async (req, res) => {
+  const products = await Product.find({});
+  res.json(products);
 };
 
-const uploadProduct = (req, res) => {
-  console.log(req.body);
+const uploadProduct = async (req, res) => {
+  const product = await Product.create(camera);
+  res.status(200).json({
+    product,
+  });
+  res.json({ product }); // const product = await Product.create(smartphones);
+  // res.status(200).json({
+  //   product,
+  // });
+  // res.json({ product });
 };
 const smartPhone = (req, res) => {
   res.send("SmartPhone Category");

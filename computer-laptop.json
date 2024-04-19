@@ -1,0 +1,117 @@
+[ 
+    {
+    "name": "ASUS Vivobook Go 15 Laptop, 15.6-inch, 256GB SSD/8GB RAM, Intel Pentium Silver N6000 (2022)",
+    "price":639,
+    "featured": true,
+    "description": "Life is all about finding the right balance, and ASUS E510 delivers just that. Lightweight and compact, it sports a stylish new look that fits right in with your dynamic lifestyle. Designed for daily computing and productivity while boasting innovative features, ASUS E510 gives you everything you need for work or play.",
+    "rating":4,
+    "brand":"Asus",
+    "category": "Computer & Laptop",
+    "images": ["https://wfnqymqvwokdepripazf.supabase.co/storage/v1/object/public/Product%20Images/ASUS%20Vivobook%20Go%2015%20Laptop,.jpg", "https://wfnqymqvwokdepripazf.supabase.co/storage/v1/object/public/Product%20Images/ASUS%20Vivobook%20Go%2015%20Laptop%201.jpg", "https://wfnqymqvwokdepripazf.supabase.co/storage/v1/object/public/Product%20Images/ASUS%20Vivobook%20Go%2015%20Laptop,.jpg"]
+},
+    {
+    "name": "Apple 2020 MacBook Air Laptop: Apple M1 Chip, 13″ Retina Display, 8GB RAM, 256GB SSD Storage, Backlit Keyboard, FaceTime HD Camera, Touch ID. Works with iPhone/iPad; Space Grey",
+    "price":1349,
+    "featured": true,
+    "description": "Apple-designed M1 chip for a giant leap in CPU, GPU and machine learning performance, Go longer than ever with up to 18 hours of battery life. 8-core CPU delivers up to 3.5x faster performance, to tackle projects faster than ever. Seven GPU cores with up to 5x faster graphics, for graphics-intensive apps and games",
+    "rating":4,
+    "brand":"Apple",
+    "category": "Computer & Laptop",
+    "images": ["https://wfnqymqvwokdepripazf.supabase.co/storage/v1/object/public/Product%20Images/Apple%202020%20MacBook%20Air%20Laptop.jpg", "https://wfnqymqvwokdepripazf.supabase.co/storage/v1/object/public/Product%20Images/Apple%202020%20MacBook%20Air%20Laptop%201.jpg", "https://wfnqymqvwokdepripazf.supabase.co/storage/v1/object/public/Product%20Images/Apple%202020%20MacBook%20Air%20Laptop%202.jpg", "https://wfnqymqvwokdepripazf.supabase.co/storage/v1/object/public/Product%20Images/Apple%202020%20MacBook%20Air%20Laptop%203.jpg"]},
+    
+    {
+    "name": "Lenovo IdeaPad Duet 5 13Q7C6 Chromebook, 13.3 FHD + Detachable Folio Keyboard, 128GB eMMC/4GB RAM (2021)",
+    "price":549,
+    "featured": false,
+    "description": "The IdeaPad Duet 5 Chromebook 13 carries on its legacy as the ultimate expression of ultra-portability and versality with its detachable fabric folio keyboard, stylus support, andultra-light and slim chassis. Simply detach the screen and enjoy your favorite movies in tablet mode, or transform it into a productivity powerhouse by snapping on its thin, detachable laptop-grade keyboard to help you get work done from the classroom or to the couch. Stay on the move all day and never worry about disruption to your tasks or entertainment with the up-to-15-hour life on the 42Wh battery1. Then charge back up to 75% in just one hour via either of the full-featured Type-C ports",
+    "rating":4,
+    "brand":"Lenovo",
+    "category": "Computer & Laptop", 
+    "images": ["https://m.media-amazon.com/images/I/71QmbnaW75L._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/71hCA6qz4FL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/81sXpXymuZL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/71hr71BNuOL._AC_SY355_.jpg"]},
+    
+    {
+    "name": "2023 - ASUS TUF F15 Gaming Laptop, 15.6-inch, 512GB SSD/16GB RAM, Intel Core i7-12700H, NVIDIA GeForce RTX 4050",
+    "price":2297,
+    "featured": true,
+    "description": "Processor : 12th Gen Intel Core i7-12700H Processor 2.3 GHz.Operating System: Windows 11 Home. Display: FHD (1920 x 1080) 16:9.Memory: 16GB DDR4-3200 SO-DIMM. Battery: 90WHrs, 4S1P, 4-cell Li-ion",
+    "rating":4,
+    "brand":"Asus",
+    "category": "Computer & Laptop",
+    "images": ["https://m.media-amazon.com/images/I/51HR961IyaL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/71msIBA3V9L._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/7193eBv9skL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/61Gu3JI5RgL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/51p8YRSAF+L._AC_SY355_.jpg"] },
+    
+    {
+    "name": "Dell Latitude 7490 14 Core i5 7300U 16GB RAM 1TB SSD Windows 11 Notebook Laptop PC with Charger (Renewed)",
+    "price":615,
+    "featured": false,
+    "description": "This pre-owned product has been professionally inspected, tested and cleaned by Amazon-qualified suppliers.There will be no visible cosmetic imperfections when held at an arms length.Products with batteries will exceed 80% capacity relative to new. Accessories may not be original, but will be compatible and fully functional. Product may come in generic box.",
+    "rating":3,
+    "brand":"Dell",
+    "category": "Computer & Laptop",
+    "images":["https://m.media-amazon.com/images/I/615TtaJwwBL._AC_SX425_.jpg", "https://m.media-amazon.com/images/I/31sbWjVKEPL._AC_SX425_.jpg"]
+    },   
+    {
+    "name": "Lenovo Yoga 7 14IRL8 Laptop, 14 + Touchscreen + Digital Pen, 512GB/16GB RAM, Intel Core i5-1340P (2022)",
+    "price":1397,
+    "featured": false,
+    "description": "Enjoy endless multitasking and digital content creation with the 360-degree convertible laptop that’s thin, slim, and ready to perform. Get an incredible display experience on up to a 2.8K OLED PureSight display that will leave you breathless, and Dolby Atmos enhanced speakers that cap off the Yoga 7i’s masterful creator and entertainment experience.",
+    "rating":3,
+    "brand":"Lenovo",
+    "category": "Computer & Laptop",
+    "images":["https://m.media-amazon.com/images/I/71UGSLeg-1L._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/51BYQAeczmL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/71To8zIWfOL._AC_SY355_.jpg"]
+    },
+    {
+    "name": "2023 - ASUS Zenbook 14 Flip (2-in-1) Laptop, 14-inch, 1TB SSD/16GB RAM, Intel Core i5-1340P",
+    "price":1597,
+    "featured": false,
+    "description": "13th Gen Intel Evo processor and Intel Iris Xe graphics to deliver powerful performance.The 360-degree hinge provides a full range of viewing angles. 14 Inch 2.8K OLED display",
+    "rating":3.5,
+    "brand":"Asus",
+    "category": "Computer & Laptop",
+  "images":["https://m.media-amazon.com/images/I/71m8BeBiumL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/619xXtzOKuL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/71UNqWWOvrL._AC_SY355_.jpg"]
+    },
+    
+    {
+    "name": "Thermaltake Computer System Infinity PRO V2 - Intel 12600KF / RTX 4070 / B660 WiFi / 32GB RGB RAM / H570 ARGB",
+    "price":2238,
+    "featured": true,
+    "description": "GeForce RTX 4070 Graphis Card - The NVIDIA GeForce RTX 4070 delivers the ultra performance and features that enthusiast gamers and creators demand; Intel Core i5 12600KF - Compete with confidence or get immersed in new worlds with a revolutionary processor architecture that focuses on what matters most, gaming.",
+    "rating":4.4,
+    "brand":"Thermaltake",
+    "category": "Computer & Laptop", 
+    "images": ["https://m.media-amazon.com/images/I/61utv6mLAlL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/71UchTwgicL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/812Ln12MFaL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/71dkjDF3DNL._AC_SY355_.jpg"]},
+    {
+    "name": "Thermaltake Computer System Infinity PRO V2 - Intel 12600KF / RTX 4070 / B660 WiFi / 32GB RGB RAM / H570 ARGB",
+    "price":2238,
+    "featured": true,
+    "description": "GeForce RTX 4070 Graphis Card - The NVIDIA GeForce RTX 4070 delivers the ultra performance and features that enthusiast gamers and creators demand; Intel Core i5 12600KF - Compete with confidence or get immersed in new worlds with a revolutionary processor architecture that focuses on what matters most, gaming.",
+    "rating":4.4,
+    "brand":"Thermaltake",
+    "category": "Computer & Laptop", 
+    "images": ["https://m.media-amazon.com/images/I/61utv6mLAlL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/71UchTwgicL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/812Ln12MFaL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/71dkjDF3DNL._AC_SY355_.jpg"]},
+    {
+    "name": "KAMRUI Mini PC, 12th Intel Alder Lake- N95 up to 3.4 GHz,16GB RAM+512GB M.2 SSD, Windows 11 Pro Mini Computer,Support 2.5 SATA SSD,WiFi 2.4G/5G,Bluetooth4.2,Triple Display,4K Reliable Office Small PC",
+    "price":229,
+    "featured": true,
+    "description": "Powerful 12th Intel Alder Lake- N95]--- KAMRUI AK1 PLUS Mini Computer about 5.1*5.1*1.8inch,is powered by Intel N95 (4M Cache, 4 Core,10nm Lithography,up to 3.40 GHz) ,Higher 30% than the performance of the 8th-Gen Celeron N5105, Pre-installed the newest windows 11 pro(64bit) but also support changing to other OS, like windows 10,ubuntu and linux, a deal and reliable partner for your work and life",
+    "rating":4.3,
+    "brand":"Kamrui",
+    "category": "Computer & Laptop", 
+    "images":["https://m.media-amazon.com/images/I/61k1eAJAunL._AC_SX425_.jpg","https://m.media-amazon.com/images/I/61DtwoJLEPL._AC_SX425_.jpg", "https://m.media-amazon.com/images/I/714XrgL-tgL._AC_SX425_.jpg", "https://m.media-amazon.com/images/I/71FKLNjASWL._AC_SX425_.jpg"]},
+    {
+    "name": "Allied Stinger Ryzen 5 5500 | RTX 3060 12GB | 16GB RAM | 1TB SSD | Win 11 | Gaming PC | Desktop Computer",
+    "price":1499,
+    "featured": true,
+    "description": "Pairing a powerful AMD processor with a Ray Tracing-enabled RTX 3060 12GB graphics card capable of tearing through AAA titles, this Allied Stinger PC is a VR- and streaming-ready gaming beast! 16GB of super-fast 3200MHz RAM brings the best out of the 6-core, 12-thread Ryzen 5 5500 processor, while a 1TB NVMe solid state operating system drive delivers load times that will have you booted and into your favourite AAA titles in mere seconds.",
+     "rating":4.3,
+    "brand":"a allied game as one",
+    "category": "Computer & Laptop", 
+    "images": ["https://m.media-amazon.com/images/I/61A+npBhJ+L._AC_SX425_.jpg", "https://m.media-amazon.com/images/I/51U3km3BbpL._AC_SX425_.jpg", "https://m.media-amazon.com/images/I/51yGUyzSBzL._AC_SX425_.jpg"]},
+    {
+    "name": "New Apple Mac Mini (Apple M1 chip with 8‑core CPU and 8‑core GPU, 8GB RAM, 512GB SSD)",
+    "price":1014,
+    "featured": false,
+    "description":"Apple-designed M1 chip for a giant leap in CPU, GPU and machine learning performance.8-core CPU packs up to 3x faster performance, to fly through workflows quicker than ever.Superfast SSD storage launches apps and opens files in an instant",
+    "rating":4.8,
+    "brand":"Apple",
+    "category": "Computer & Laptop", 
+    "images": ["https://m.media-amazon.com/images/I/61MNtbRqLyS._AC_SX466_.jpg", "https://m.media-amazon.com/images/I/815lrEMzE-S._AC_SX466_.jpg", "https://m.media-amazon.com/images/I/61s9roA48WS._AC_SX466_.jpg", "https://m.media-amazon.com/images/I/511bsPO8j2S._AC_SX466_.jpg", "https://m.media-amazon.com/images/I/71Zrj+HKygS._AC_SX466_.jpg"]}]
