@@ -1,0 +1,99 @@
+[
+    {
+    "name": "Canon EOS 3000D DSLR Camera with 18-55mm Lens", 
+       "price":729,
+    "featured": true,
+    "description":"Capture your world in crisp detail, beautiful background blur and 18MP resolution then view instantly on the hi res 2.7” LCD. The built-in feature guide helps you understand each mode as you use it, guiding you to capture even more beautiful images",
+     "rating":4.6,
+    "brand":"Cannon",
+    "category": "Camera",
+    "images":["https://m.media-amazon.com/images/I/81fsA6RI10L._AC_SX355_.jpg", "https://m.media-amazon.com/images/I/51DEThStYKL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/41Id8aObc+L._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/41Z0c-OpSeL._AC_SY355_.jpg"]
+
+},
+    {
+    "name":"Canon EOS 250D / Rebel SL3 DSLR Camera w/ 18-55mm F/3.5-5.6 III Lens",      
+     "price":1016,
+    "featured": true,
+    "description":"This Jerry’s Photo DSLR Camera Package Includes- LP-E10 Battery , LC-E10 Charger , Lens Caps And Body Cap ,Canon Neck Strap , Jerry’s Photo Lens Cleaning Cloth , And Includes. Canon EOS 250D Rebel SL3 DSLRCamera Body (International Version )- 24.1MP APS-C CMOS Sensor, DIGIC 8 Image Processor, 3.0 1.04m-Dot Vari-Angle Touchscreen, UHD 4K24p Video and 4K Time-Lapse Movie, UHD 4K Video Recording, 9-Point Phase-Detection AF and Dual Pixel CMOS AF, Optical pentamirror viewfinder",
+  "rating":4.5,
+    "brand":"Cannon",
+    "category": "Camera",
+    "images":["https://m.media-amazon.com/images/I/81HTuR21bIL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/81fzoLKadoL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/71mzfzTHUGL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/81o-USN5raL._AC_SY355_.jpg"]
+},
+    {
+    "name":"Canon EOS 250D / Rebel SL3 DSLR Camera w/ 18-55mm F/3.5-5.6 III Lens",      
+     "price":1016,
+    "featured": true,
+    "description":"This Jerry’s Photo DSLR Camera Package Includes- LP-E10 Battery , LC-E10 Charger , Lens Caps And Body Cap ,Canon Neck Strap , Jerry’s Photo Lens Cleaning Cloth , And Includes. Canon EOS 250D Rebel SL3 DSLRCamera Body (International Version )- 24.1MP APS-C CMOS Sensor, DIGIC 8 Image Processor, 3.0 1.04m-Dot Vari-Angle Touchscreen, UHD 4K24p Video and 4K Time-Lapse Movie, UHD 4K Video Recording, 9-Point Phase-Detection AF and Dual Pixel CMOS AF, Optical pentamirror viewfinder",
+  "rating":4.5,
+    "brand":"Cannon",
+    "category": "Camera",
+    "images":["https://m.media-amazon.com/images/I/81HTuR21bIL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/81fzoLKadoL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/71mzfzTHUGL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/81o-USN5raL._AC_SY355_.jpg"]
+},
+    {
+    "name":"Nikon D850 DSLR Camera (Body Only)",
+   "price":3881,
+    "featured": false,
+    "description":"The D850 has extraordinary image clarity with its 45.7 megapixels, its resolution that is best suited to professional large-format printing; An ISO range of 64 to 25600 also allows extreme versatility. As a first for Nikon, full-frame 4K UHD can be filmed in both Nikon FX-based and DX-based formats; With built in 4K Time-lapse mode, slow-mo Mode ", 
+     "rating":4.7,
+    "brand":"Nikon",
+    "category": "Camera",
+    "images":["https://m.media-amazon.com/images/I/81N3i8KmQaL._AC_SX355_.jpg", "https://m.media-amazon.com/images/I/81+8qiWqPaL._AC_SX355_.jpg", "https://m.media-amazon.com/images/I/81CAWUoGL9L._AC_SX355_.jpg", "https://m.media-amazon.com/images/I/71IuUPE1l-L._AC_SX355_.jpg"]
+
+},
+    {
+    "name":"Canon EOS 2000D Kit [18-55 DC III] DSLR Camera - International Version - Black",
+   "price":735,
+    "featured": false,
+    "description":"24.1 megapixel APS-C CMOS sensor, FullHD 1920, 1080 30p video recording, AF sensor with 9 cross-type AF points ",
+       "rating":4.7,
+    "brand":"Cannon",
+    "category": "Camera",
+    "images":["https://m.media-amazon.com/images/I/81RLTx5tIUL._AC_SX450_.jpg", "https://m.media-amazon.com/images/I/71SN62tdCqL._AC_SX450_.jpg", "https://m.media-amazon.com/images/I/71XJEbhjiqL._AC_SX450_.jpg", "https://m.media-amazon.com/images/I/71ePu-I5KEL._AC_SX450_.jpg"]
+},
+    {
+    "name":"Canon EOS 2000D Kit [18-55 DC III] DSLR Camera - International Version - Black",
+   "price":1290,
+    "featured": false,
+    "description":"24.1 megapixel APS-C CMOS sensor, FullHD 1920, 1080 30p video recording, AF sensor with 9 cross-type AF points ",
+       "rating":4.7,
+    "brand":"Cannon",
+    "category": "Camera",
+    "images":["https://m.media-amazon.com/images/I/81RLTx5tIUL._AC_SX450_.jpg", "https://m.media-amazon.com/images/I/71SN62tdCqL._AC_SX450_.jpg", "https://m.media-amazon.com/images/I/71XJEbhjiqL._AC_SX450_.jpg", "https://m.media-amazon.com/images/I/71ePu-I5KEL._AC_SX450_.jpg"]
+},
+  {
+    "name":"Sony Alpha 7 III Digital E-Mount Camera with 35mm Full Frame Image Sensor (Body Only), ILCE7M3B",   
+    "price":2304,
+    "featured": false,
+    "description":"Full-frame 4K HDR movie recording and pro-class movie features. Phenomenal AF performance and 10 fps continuous shooting. Newly developed 24.2MP 35mm full-frame Exmor R CMOS sensor and enhanced image processing ",
+        "rating":4.9,
+    "brand":"Sony",
+    "category": "Camera",
+    "images":["https://m.media-amazon.com/images/I/6150UIKk4rL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/417B8iUdheL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/513IMiT+6rL._AC_SY355_.jpg", "https://m.media-amazon.com/images/I/510BHx7CqML._AC_SY355_.jpg"]
+
+
+},
+  {
+    "name":"Sony Alpha NEX-3 Interchangeable Lens Digital Camera w/18-55mm Lens (Silver)- 14.2 Mpix",   
+    "price":1228,
+    "featured": false,
+    "description":"The quality of a DSLR in about half the size, weight. Same APS-C sensor size, same resolution as Alpha DSLRs. World's smallest, lightest interchangeable lens camera",
+    "rating":4.4,
+    "brand":"Sony",
+    "category": "Camera",
+    "images":["https://m.media-amazon.com/images/I/51h6JJ8hK4L._AC_SX355_.jpg", "https://m.media-amazon.com/images/I/51AOLzFq+wL._AC_SX355_.jpg", "https://m.media-amazon.com/images/I/514h+gwWD2L._AC_SX355_.jpg"]
+
+},
+  {
+    "name":"Canon EOS R7 Mirrorless Camera with RFS18-150STM Travel Lens",   
+    "price":2449,
+    "featured": false,
+    "description":"With RF-S 18-150mm f/3.5-6.3 IS STM. Up to 30 frames per second continuous shooting. High performance subject tracking",     
+    "rating":4.9,
+    "brand":"Cannon",
+    "category": "Camera",
+    "images":["https://m.media-amazon.com/images/I/7107bNitvIL._AC_SX355_.jpg", "https://m.media-amazon.com/images/I/51OoYZLi+9L._AC_SX355_.jpg", "https://m.media-amazon.com/images/I/61rwuZ-H+dL._AC_SX355_.jpg"]
+}
+   
+
+]
