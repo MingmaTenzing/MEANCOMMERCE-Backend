@@ -2,17 +2,33 @@ const Product = require("../models/product");
 const { StatusCodes } = require("http-status-codes");
 
 const getAllProducts = async (req, res) => {
-  const products = await Product.find({});
-  if (!products) {
-    res.status(StatusCodes.NOT_FOUND).json({
-      message: "Product not Found",
-    });
+  const page = req.query.page;
+  const limit = req.query.limit;
+
+  try {
+    console.log(page, limit);
+    const products = await Product.find({})
+      .skip((page - 1) * limit)
+      .limit(limit);
+
+    res.status(StatusCodes.OK).json(products);
+  } catch (error) {
+    res.status(StatusCodes.INTERNAL_SERVER_ERROR).json(error);
   }
-  res.status(StatusCodes.OK).json(products);
+
+  // const products = await Product.find({});
+  // if (!products) {
+  //   res.status(StatusCodes.NOT_FOUND).json({
+  //     message: "Product not Found",
+  //   });
+  // }
+
+  // res.status(StatusCodes.OK).json(products);
 };
 
 const getSingleProduct = async (req, res) => {
   const productId = req.params.id;
+
   if (!productId) {
     res
       .status(StatusCodes.BAD_REQUEST)
