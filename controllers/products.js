@@ -4,26 +4,20 @@ const { StatusCodes } = require("http-status-codes");
 const getAllProducts = async (req, res) => {
   const page = req.query.page;
   const limit = req.query.limit;
-
   try {
     console.log(page, limit);
     const products = await Product.find({})
       .skip((page - 1) * limit)
       .limit(limit);
-
+    console.log(products.length);
     res.status(StatusCodes.OK).json(products);
   } catch (error) {
     res.status(StatusCodes.INTERNAL_SERVER_ERROR).json(error);
   }
+};
 
-  // const products = await Product.find({});
-  // if (!products) {
-  //   res.status(StatusCodes.NOT_FOUND).json({
-  //     message: "Product not Found",
-  //   });
-  // }
-
-  // res.status(StatusCodes.OK).json(products);
+const shopProducts = async (req, res) => {
+  res.status(StatusCodes.OK).json("working");
 };
 
 const getSingleProduct = async (req, res) => {
@@ -114,4 +108,5 @@ module.exports = {
   getAllProducts,
   uploadProduct,
   getSingleProduct,
+  shopProducts,
 };
