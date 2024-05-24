@@ -17,7 +17,15 @@ const getAllProducts = async (req, res) => {
 };
 
 const shopProducts = async (req, res) => {
-  res.status(StatusCodes.OK).json("working");
+  try {
+    const products = await Product.find({
+      category: "Smartphone",
+      price: { $gt: 1000, $lt: 1500 },
+    });
+    res.status(StatusCodes.OK).json(products);
+  } catch (error) {
+    res.status(StatusCodes.INTERNAL_SERVER_ERROR).json(error);
+  }
 };
 
 const getSingleProduct = async (req, res) => {
