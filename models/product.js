@@ -8,6 +8,7 @@ const productSchema = new mongoose.Schema({
   price: {
     type: Number,
     required: [true, "please provide the price"],
+    value: { max: 10000 },
   },
   category: {
     type: String,
