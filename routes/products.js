@@ -12,7 +12,8 @@ const {
   shopProducts,
 } = require("../controllers/products");
 
-router.route("/").get(getAllProducts).post(uploadProduct);
+router.route("/").get(getAllProducts).post(shopProducts);
+router.route("/upload").post(uploadProduct);
 router.route("/shop").get(shopProducts);
 router.route("/:id").get(getSingleProduct);
 router.route("/smartphones").get(smartPhone);

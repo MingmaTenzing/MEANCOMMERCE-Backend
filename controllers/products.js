@@ -17,14 +17,23 @@ const getAllProducts = async (req, res) => {
 };
 
 const shopProducts = async (req, res) => {
-  try {
-    const products = await Product.find({
-      category: "Smartphone",
-      price: { $gt: 1000, $lt: 1500 },
+  const { category, maximumRange, mininumRange } = req.body;
+  if (!category | !maximumRange | !mininumRange) {
+    res.status(StatusCodes.BAD_REQUEST).json({
+      msg: "please provide category, maximum range and mininum range",
     });
+  } else {
+    const products = await Product.find({
+      category: category,
+      price: {
+        $lt: maximumRange,
+        $gt: mininumRange,
+      },
+    });
+    if (!products) {
+      res.status(StatusCodes.NOT_FOUND).json({ msg: "no products found" });
+    }
     res.status(StatusCodes.OK).json(products);
-  } catch (error) {
-    res.status(StatusCodes.INTERNAL_SERVER_ERROR).json(error);
   }
 };
 
