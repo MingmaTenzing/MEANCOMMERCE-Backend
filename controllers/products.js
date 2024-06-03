@@ -1,3 +1,4 @@
+const product = require("../models/product");
 const Product = require("../models/product");
 const { StatusCodes } = require("http-status-codes");
 
@@ -6,9 +7,9 @@ const getAllProducts = async (req, res) => {
   const limit = req.query.limit;
   try {
     console.log(page, limit);
-    const products = await Product.find({})
-      .skip((page - 1) * limit)
-      .limit(limit);
+    const products = await Product.find({});
+    // .skip((page - 1) * limit)
+    // .limit(limit);
     console.log(products.length);
     res.status(StatusCodes.OK).json(products);
   } catch (error) {
@@ -17,23 +18,11 @@ const getAllProducts = async (req, res) => {
 };
 
 const shopProducts = async (req, res) => {
-  const { category, maximumRange, mininumRange } = req.body;
-  if (!category | !maximumRange | !mininumRange) {
-    res.status(StatusCodes.BAD_REQUEST).json({
-      msg: "please provide category, maximum range and mininum range",
-    });
-  } else {
-    const products = await Product.find({
-      category: category,
-      price: {
-        $lt: maximumRange,
-        $gt: mininumRange,
-      },
-    });
-    if (!products) {
-      res.status(StatusCodes.NOT_FOUND).json({ msg: "no products found" });
-    }
+  try {
+    const products = await Product.find(req.body);
     res.status(StatusCodes.OK).json(products);
+  } catch (error) {
+    res.status(StatusCodes.INTERNAL_SERVER_ERROR).json(error);
   }
 };
 
@@ -56,14 +45,6 @@ const getSingleProduct = async (req, res) => {
         .send({ message: "Product not found with id " + productId });
     }
   }
-
-  // const product = await Product.findOne({ _id: productId });
-  // if (!product) {
-  //   res
-  //     .status(StatusCodes.NOT_FOUND)
-  //     .json({ msg: "product not found with id " + productId });
-  // }
-  // res.json({ product });
 };
 
 const uploadProduct = async (req, res) => {
