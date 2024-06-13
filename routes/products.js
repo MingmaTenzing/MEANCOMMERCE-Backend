@@ -3,10 +3,7 @@ const router = express.Router();
 
 const {
   getAllProducts,
-  smartPhone,
-  headPhones,
-  computers,
-  accesssories,
+  getCategoryProducts,
   uploadProduct,
   getSingleProduct,
   shopProducts,
@@ -15,10 +12,6 @@ const {
 router.route("/").get(getAllProducts).post(shopProducts);
 router.route("/upload").post(uploadProduct);
 router.route("/shop").get(shopProducts);
-router.route("/:id").get(getSingleProduct);
-router.route("/smartphones").get(smartPhone);
-router.route("/headphones").get(headPhones);
-router.route("/computers").get(computers);
-router.route("/accessories").get(accesssories);
+router.route("/:id").get(getSingleProduct).post(getCategoryProducts);
 
 module.exports = router;
