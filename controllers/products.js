@@ -7,9 +7,9 @@ const getAllProducts = async (req, res) => {
   const limit = req.query.limit;
   try {
     console.log(page, limit);
-    const products = await Product.find({});
-    // .skip((page - 1) * limit)
-    // .limit(limit);
+    const products = await Product.find({})
+      .skip((page - 1) * limit)
+      .limit(limit);
     console.log(products.length);
     res.status(StatusCodes.OK).json(products);
   } catch (error) {
@@ -29,6 +29,7 @@ const shopProducts = async (req, res) => {
 };
 
 const getCategoryProducts = async (req, res) => {
+  console.log(req.body);
   try {
     const products = await Product.find(req.body);
     res.status(StatusCodes.OK).json(products);

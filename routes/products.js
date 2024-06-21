@@ -12,6 +12,7 @@ const {
 router.route("/").get(getAllProducts).post(shopProducts);
 router.route("/upload").post(uploadProduct);
 router.route("/shop").get(shopProducts);
-router.route("/:id").get(getSingleProduct).post(getCategoryProducts);
+router.route("/category-products").post(getCategoryProducts);
+router.route("/:id").get(getSingleProduct);
 
 module.exports = router;
