@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //routes
 const productsRoute = require("./routes/products");
 const categoriesRoute = require("./routes/categories");
-
+const checkoutRoute = require("./routes/checkout");
 //port
 const port = 5000;
 
@@ -29,6 +29,7 @@ app.use(function (req, res, next) {
 });
 app.use("/api/v1/categories", categoriesRoute);
 app.use("/api/v1/products", productsRoute);
+app.use("/api/v1/create-checkout-session", checkoutRoute);
 
 const start = async () => {
   try {
