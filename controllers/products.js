@@ -39,6 +39,7 @@ const getCategoryProducts = async (req, res) => {
 };
 const getSingleProduct = async (req, res) => {
   const productId = req.params.id;
+  console.log(productId);
 
   if (!productId) {
     res
@@ -59,15 +60,15 @@ const getSingleProduct = async (req, res) => {
 };
 
 const uploadProduct = async (req, res) => {
-  const product = await Product.create(camera);
-  if (!product) {
-    res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
-      message: "Internal Server Error",
-    });
-  }
-  res.status(StatusCodes.OK).json({
-    product,
-  });
+  // const product = await Product.create(camera);
+  // if (!product) {
+  //   res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
+  //     message: "Internal Server Error",
+  //   });
+  // }
+  // res.status(StatusCodes.OK).json({
+  //   product,
+  // });
 };
 
 module.exports = {
