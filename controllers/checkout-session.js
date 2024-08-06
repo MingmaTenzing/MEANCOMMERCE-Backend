@@ -11,7 +11,7 @@ const checkoutSession = async (req, res) => {
     line_items: line_items,
     mode: "payment",
     ui_mode: "embedded",
-    return_url: `http://localhost:4200?session_id={CHECKOUT_SESSION_ID}`,
+    return_url: `http://localhost:4200/success?session_id={CHECKOUT_SESSION_ID}`,
   });
 
   res.status(StatusCodes.OK).json(session.client_secret);
