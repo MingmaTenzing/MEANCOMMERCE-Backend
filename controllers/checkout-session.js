@@ -17,4 +17,12 @@ const checkoutSession = async (req, res) => {
   res.status(StatusCodes.OK).json(session.client_secret);
 };
 
-module.exports = checkoutSession;
+const sessionStatus = async (req, res) => {
+  const session = await stripe.checkout.sessions.retrieve(req.query.session_id);
+  res.json({
+    status: session.status,
+    customer_email: session.customer_details.email,
+  });
+};
+
+module.exports = { checkoutSession, sessionStatus };

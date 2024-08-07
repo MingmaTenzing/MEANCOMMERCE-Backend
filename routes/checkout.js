@@ -1,8 +1,11 @@
 const express = require("express");
-const checkoutSession = require("../controllers/checkout-session");
+const {
+  checkoutSession,
+  sessionStatus,
+} = require("../controllers/checkout-session");
 
 const router = express.Router();
 
-router.route("/").post(checkoutSession);
-
+router.route("/create-checkout-session").post(checkoutSession);
+router.route("/session-status").get(sessionStatus);
 module.exports = router;
