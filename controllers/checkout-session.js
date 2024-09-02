@@ -27,12 +27,18 @@ const checkoutSession = async (req, res) => {
 };
 
 const sessionStatus = async (req, res) => {
-  const session = await stripe.checkout.sessions.retrieve(req.query.session_id);
-  res.status(StatusCodes.OK).json({
-    status: session.status,
-    customer_email: session.customer_details.email,
-    customer_name: session.customer_details.name,
-  });
+  try {
+    const session = await stripe.checkout.sessions.retrieve(
+      req.query.session_id
+    );
+    res.status(StatusCodes.OK).json({
+      status: session.status,
+      customer_email: session.customer_details.email,
+      customer_name: session.customer_details.name,
+    });
+  } catch (error) {
+    res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ message: error });
+  }
 };
 
 module.exports = { checkoutSession, sessionStatus };
