@@ -12,6 +12,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 const productsRoute = require("./routes/products");
 const categoriesRoute = require("./routes/categories");
 const checkoutRoute = require("./routes/checkout");
+const auth_route = require("./routes/auth");
 //port
 const port = 5000;
 
@@ -30,6 +31,7 @@ app.use(function (req, res, next) {
 app.use("/api/v1/categories", categoriesRoute);
 app.use("/api/v1/products", productsRoute);
 app.use("/api/v1/checkout", checkoutRoute);
+app.use("/api/v1/auth", auth_route);
 
 const start = async () => {
   try {
