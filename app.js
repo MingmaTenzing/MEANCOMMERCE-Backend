@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 require("dotenv").config();
 
 app.use(express.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 //routes
 const productsRoute = require("./routes/products");
@@ -29,7 +29,7 @@ app.use(function (req, res, next) {
 });
 app.use("/api/v1/categories", categoriesRoute);
 app.use("/api/v1/products", productsRoute);
-app.use("/api/v1/create-checkout-session", checkoutRoute);
+app.use("/api/v1/checkout", checkoutRoute);
 
 const start = async () => {
   try {

@@ -5,80 +5,40 @@ const stripe = require("stripe")(stripe_secret);
 
 const checkoutSession = async (req, res) => {
   const { line_items } = req.body;
-  console.log(line_items);
-  console.log("working");
-  const session = await stripe.checkout.sessions.create({
-    line_items: [
-      {
-        price_data: {
-          currency: "aud",
-          product_data: {
-            name: "Apple iPhone 15 Pro Max (256 GB) - Blue Titanium",
-            images: [
-              "https://m.media-amazon.com/images/I/81fxjeu8fdL._AC_SX679_.jpg",
-              "https://m.media-amazon.com/images/I/61HZS-ZSCLL._AC_SX679_.jpg",
-              "https://m.media-amazon.com/images/I/71TSx9D2BVL._AC_SX679_.jpg",
-              "https://m.media-amazon.com/images/I/61pXO8SdASL._AC_SX679_.jpg",
-            ],
-          },
-          unit_amount: 2000,
-        },
-        quantity: 1,
-        adjustable_quantity: {
-          enabled: true,
-          maximum: 100,
-          minimum: 0,
-        },
-      },
-      {
-        price_data: {
-          currency: "aud",
-          product_data: {
-            name: "Apple iPhone 15 Pro Max (256 GB) - Blue Titanium",
-            images: [
-              "https://m.media-amazon.com/images/I/81fxjeu8fdL._AC_SX679_.jpg",
-              "https://m.media-amazon.com/images/I/61HZS-ZSCLL._AC_SX679_.jpg",
-              "https://m.media-amazon.com/images/I/71TSx9D2BVL._AC_SX679_.jpg",
-              "https://m.media-amazon.com/images/I/61pXO8SdASL._AC_SX679_.jpg",
-            ],
-          },
-          unit_amount: 2000,
-        },
-        quantity: 1,
-        adjustable_quantity: {
-          enabled: true,
-          maximum: 100,
-          minimum: 0,
-        },
-      },
-      {
-        price_data: {
-          currency: "aud",
-          product_data: {
-            name: "Apple iPhone 15 Pro Max (256 GB) - Blue Titanium",
-            images: [
-              "https://m.media-amazon.com/images/I/81fxjeu8fdL._AC_SX679_.jpg",
-              "https://m.media-amazon.com/images/I/61HZS-ZSCLL._AC_SX679_.jpg",
-              "https://m.media-amazon.com/images/I/71TSx9D2BVL._AC_SX679_.jpg",
-              "https://m.media-amazon.com/images/I/61pXO8SdASL._AC_SX679_.jpg",
-            ],
-          },
-          unit_amount: 2000,
-        },
-        quantity: 1,
-        adjustable_quantity: {
-          enabled: true,
-          maximum: 100,
-          minimum: 0,
-        },
-      },
-    ],
-    mode: "payment",
-    ui_mode: "embedded",
-    return_url: `http://localhost:4200?session_id={CHECKOUT_SESSION_ID}`,
-  });
 
-  res.status(StatusCodes.OK).json(session.client_secret);
+  if (!line_items) {
+    res
+      .status(StatusCodes.BAD_REQUEST)
+      .json({ message: "Please provide line items" });
+  }
+
+  try {
+    const session = await stripe.checkout.sessions.create({
+      line_items: line_items,
+      mode: "payment",
+      ui_mode: "embedded",
+      return_url: `http://localhost:4200/success?session_id={CHECKOUT_SESSION_ID}`,
+    });
+
+    res.status(StatusCodes.OK).json(session.client_secret);
+  } catch (error) {
+    res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ message: error });
+  }
 };
 
-module.exports = checkoutSession;
+const sessionStatus = async (req, res) => {
+  try {
+    const session = await stripe.checkout.sessions.retrieve(
+      req.query.session_id
+    );
+    res.status(StatusCodes.OK).json({
+      status: session.status,
+      customer_email: session.customer_details.email,
+      customer_name: session.customer_details.name,
+    });
+  } catch (error) {
+    res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ message: error });
+  }
+};
+
+module.exports = { checkoutSession, sessionStatus };
