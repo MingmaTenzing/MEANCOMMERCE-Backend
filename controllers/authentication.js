@@ -1,12 +1,10 @@
-const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
 const User = require("./../models/user");
 const { StatusCodes } = require("http-status-codes");
 
 const register = async (req, res) => {
-  const { email, password, user_name } = req.body;
   try {
     const user = new User(req.body);
+    console.log(req.body);
     await user.save();
     const token = user.createJWT();
     res.status(StatusCodes.CREATED).json({
@@ -23,12 +21,18 @@ const login = async (req, res) => {
   try {
     const { email, password } = req.body;
     const user = await User.findOne({ email });
+    if (!user) {
+      return res
+        .status(StatusCodes.NOT_FOUND)
+        .json({ message: "user not found please register first" });
+    }
     const matchPassword = await user.comparePassword(password);
     if (!matchPassword) {
-      res.status(StatusCodes.UNAUTHORIZED).json("invalid credentials");
+      return res.status(StatusCodes.UNAUTHORIZED).json("invalid credentials");
+    } else {
+      const token = user.createJWT();
+      res.status(StatusCodes.OK).json({ token });
     }
-    const token = user.createJWT();
-    res.status(StatusCodes.OK).json({ token });
   } catch (error) {
     console.log(error);
     res.status(StatusCodes.INTERNAL_SERVER_ERROR).json(error);
