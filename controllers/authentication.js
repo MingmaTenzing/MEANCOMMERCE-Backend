@@ -1,5 +1,6 @@
 const User = require("./../models/user");
 const { StatusCodes } = require("http-status-codes");
+const jwt = require("jsonwebtoken");
 
 const register = async (req, res) => {
   try {
@@ -39,4 +40,27 @@ const login = async (req, res) => {
   }
 };
 
-module.exports = { register, login };
+const session_check = async (req, res) => {
+  const authHeader = req.headers.authorization;
+  if (!authHeader || !authHeader.startsWith("Bearer")) {
+    return res
+      .status(StatusCodes.UNAUTHORIZED)
+      .json({ message: "Token Invalid, please login again" });
+  }
+  const token = authHeader.split(" ")[1];
+
+  try {
+    const verfiy_jwt = jwt.verify(token, process.env.JWT_SECRET);
+    res.status(StatusCodes.OK).json({
+      message: "authorized",
+      userId: verfiy_jwt.userId,
+      name: verfiy_jwt.name,
+    });
+  } catch (error) {
+    res
+      .status(StatusCodes.UNAUTHORIZED)
+      .json({ message: "Invalid Authenticatoin" });
+  }
+};
+
+module.exports = { register, login, session_check };

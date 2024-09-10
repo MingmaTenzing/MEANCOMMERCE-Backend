@@ -30,7 +30,7 @@ app.use(function (req, res, next) {
   next();
 });
 app.use("/api/v1/categories", categoriesRoute);
-app.use("/api/v1/products", auth, productsRoute);
+app.use("/api/v1/products", productsRoute);
 app.use("/api/v1/checkout", checkoutRoute);
 app.use("/api/v1/auth", auth_route);
 
