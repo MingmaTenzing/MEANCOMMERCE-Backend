@@ -2,6 +2,7 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
+const cors = require("cors");
 
 require("dotenv").config();
 
@@ -29,6 +30,7 @@ app.use(function (req, res, next) {
   );
   next();
 });
+
 app.use("/api/v1/categories", categoriesRoute);
 app.use("/api/v1/products", productsRoute);
 app.use("/api/v1/checkout", checkoutRoute);

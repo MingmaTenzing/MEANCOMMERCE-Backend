@@ -30,6 +30,7 @@ userSchema.methods.createJWT = function () {
     {
       userId: this._id,
       name: this.user_name,
+      
     },
     process.env.JWT_SECRET,
     {

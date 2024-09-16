@@ -8,6 +8,7 @@ const auth = async (req, res, next) => {
     return res.status(StatusCodes.UNAUTHORIZED).json("Authentication Invalid");
   }
   const token = authHeader.split(" ")[1];
+  
 
   try {
     const decode_jwt = jwt.verify(token, process.env.JWT_SECRET);

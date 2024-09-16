@@ -48,6 +48,7 @@ const session_check = async (req, res) => {
       .json({ message: "Token Invalid, please login again" });
   }
   const token = authHeader.split(" ")[1];
+  console.log(token);
 
   try {
     const verfiy_jwt = jwt.verify(token, process.env.JWT_SECRET);
