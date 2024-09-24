@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const cors = require("cors");
-
+const cookieParser = require("cookie-parser");
 require("dotenv").config();
 
 app.use(express.json());
@@ -21,6 +21,7 @@ const port = 5000;
 const connectDB = require("./db/connect");
 const auth = require("./middleware/verifytoken");
 
+app.use(cookieParser());
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");

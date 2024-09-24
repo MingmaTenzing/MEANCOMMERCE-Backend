@@ -3,23 +3,19 @@ const { StatusCodes } = require("http-status-codes");
 require("dotenv").config();
 
 const auth = async (req, res, next) => {
-  const authHeader = req.headers.authorization;
-  if (!authHeader || !authHeader.startsWith("Bearer")) {
-    return res.status(StatusCodes.UNAUTHORIZED).json("Authentication Invalid");
+  const authCookie = req.cookies["authCookie"];
+  if (authCookie == null) {
+    return res
+      .status(StatusCodes.UNAUTHORIZED)
+      .json({ msg: "user unauthorized" });
   }
-  const token = authHeader.split(" ")[1];
-  
-
   try {
-    const decode_jwt = jwt.verify(token, process.env.JWT_SECRET);
-    req.user = {
-      userId: decode_jwt.userId,
-      name: decode_jwt.name,
-    };
+    const verfiy_jwt = jwt.verify(authCookie, process.env.JWT_SECRET);
+    req.userId = verfiy_jwt.userId;
+    req.userName = verfiy_jwt.name;
     next();
   } catch (error) {
-    console.log(error);
-    res.status(StatusCodes.UNAUTHORIZED).json({ message: "Invalid token" });
+    res.status(StatusCodes.UNAUTHORIZED).json({ msg: "invalid token" });
   }
 };
 

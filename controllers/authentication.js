@@ -8,6 +8,7 @@ const register = async (req, res) => {
     console.log(req.body);
     await user.save();
     const token = user.createJWT();
+    res.cookie("authcookie", token, { maxAge: 900000, httpOnly: true });
     res.status(StatusCodes.CREATED).json({
       message: `user created successfully`,
       user,
@@ -32,7 +33,9 @@ const login = async (req, res) => {
       return res.status(StatusCodes.UNAUTHORIZED).json("invalid credentials");
     } else {
       const token = user.createJWT();
+      res.cookie("authcookie", token, { maxAge: 900000, httpOnly: true });
       res.status(StatusCodes.OK).json({ token });
+      next();
     }
   } catch (error) {
     console.log(error);
@@ -41,26 +44,41 @@ const login = async (req, res) => {
 };
 
 const session_check = async (req, res) => {
-  const authHeader = req.headers.authorization;
-  if (!authHeader || !authHeader.startsWith("Bearer")) {
+  // const authCooki = req.headers.authorization;
+  // if (!authHeader || !authHeader.startsWith("Bearer")) {
+  //   return res
+  //     .status(StatusCodes.UNAUTHORIZED)
+  //     .json({ message: "Token Invalid, please login again" });
+  // }
+  // const token = authHeader.split(" ")[1];
+  // console.log(token);
+
+  // try {
+  //   const verfiy_jwt = jwt.verify(token, process.env.JWT_SECRET);
+  //   res.status(StatusCodes.OK).json({
+  //     message: "authorized",
+  //     userId: verfiy_jwt.userId,
+  //     name: verfiy_jwt.name,
+  //   });
+  // } catch (error) {
+  //   res
+  //     .status(StatusCodes.UNAUTHORIZED)
+  //     .json({ message: "Invalid Authenticatoin" });
+  // }
+
+  const authCookie = req.cookies["authCookie"];
+  if (authCookie == null) {
     return res
       .status(StatusCodes.UNAUTHORIZED)
-      .json({ message: "Token Invalid, please login again" });
+      .json({ msg: "user unauthorized" });
   }
-  const token = authHeader.split(" ")[1];
-  console.log(token);
-
   try {
-    const verfiy_jwt = jwt.verify(token, process.env.JWT_SECRET);
-    res.status(StatusCodes.OK).json({
-      message: "authorized",
-      userId: verfiy_jwt.userId,
-      name: verfiy_jwt.name,
-    });
+    const verfiy_jwt = jwt.verify(authCookie, process.env.JWT_SECRET);
+    req.userId = verfiy_jwt.userId;
+    req.userName = verfiy_jwt.name;
+    next();
   } catch (error) {
-    res
-      .status(StatusCodes.UNAUTHORIZED)
-      .json({ message: "Invalid Authenticatoin" });
+    res.status(StatusCodes.UNAUTHORIZED).json({ msg: "invalid token" });
   }
 };
 
