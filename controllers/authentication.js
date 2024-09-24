@@ -35,7 +35,6 @@ const login = async (req, res) => {
       const token = user.createJWT();
       res.cookie("authcookie", token, { maxAge: 900000, httpOnly: true });
       res.status(StatusCodes.OK).json({ token });
-      next();
     }
   } catch (error) {
     console.log(error);
@@ -76,6 +75,12 @@ const session_check = async (req, res) => {
     const verfiy_jwt = jwt.verify(authCookie, process.env.JWT_SECRET);
     req.userId = verfiy_jwt.userId;
     req.userName = verfiy_jwt.name;
+    res.status(StatusCodes.OK).json({
+      msg: {
+        userId: verfiy_jwt.userId,
+        userName: verfiy_jwt.userName,
+      },
+    });
     next();
   } catch (error) {
     res.status(StatusCodes.UNAUTHORIZED).json({ msg: "invalid token" });

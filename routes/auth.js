@@ -8,6 +8,6 @@ const router = express.Router();
 
 router.route("/register").post(register);
 router.route("/login").post(login);
-router.route("/session-check").post(session_check);
+router.route("/session-check").get(session_check);
 
 module.exports = router;
