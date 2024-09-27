@@ -11,6 +11,10 @@ const userSchema = new mongoose.Schema({
     type: "string",
     required: true,
   },
+
+  profile_image: {
+    type: "string",
+  },
   user_name: {
     type: "String",
   },
@@ -30,7 +34,6 @@ userSchema.methods.createJWT = function () {
     {
       userId: this._id,
       name: this.user_name,
-      
     },
     process.env.JWT_SECRET,
     {
