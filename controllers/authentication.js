@@ -8,7 +8,20 @@ const register = async (req, res) => {
     console.log(req.body);
     await user.save();
     const token = user.createJWT();
-    res.cookie("authcookie", token, { maxAge: 900000, httpOnly: true });
+    res.cookie("token", token, {
+      // can only be accessed by server requests
+      httpOnly: false,
+      // path = where the cookie is valid
+      path: "/",
+      // domain = what domain the cookie is valid on
+
+      // secure = only send cookie over https
+      secure: false,
+      // sameSite = only send cookie if the request is coming from the same origin
+      sameSite: "lax", // "strict" | "lax" | "none" (secure must be true)
+      // maxAge = how long the cookie is valid for in milliseconds
+      maxAge: 3600000, // 1 hour
+    });
     res.status(StatusCodes.CREATED).json({
       message: `user created successfully`,
       user,
@@ -33,8 +46,21 @@ const login = async (req, res) => {
       return res.status(StatusCodes.UNAUTHORIZED).json("invalid credentials");
     } else {
       const token = user.createJWT();
-      res.cookie("authcookie", token, { maxAge: 900000, httpOnly: true });
-      res.status(StatusCodes.OK).json({ token });
+      res.cookie("token", token, {
+        // can only be accessed by server requests
+        httpOnly: false,
+        // path = where the cookie is valid
+        path: "/",
+        // domain = what domain the cookie is valid on
+
+        // secure = only send cookie over https
+        secure: false,
+        // sameSite = only send cookie if the request is coming from the same origin
+        sameSite: "lax", // "strict" | "lax" | "none" (secure must be true)
+        // maxAge = how long the cookie is valid for in milliseconds
+        maxAge: 3600000, // 1 hour
+      });
+      res.status(StatusCodes.OK).json({ user });
     }
   } catch (error) {
     console.log(error);
@@ -43,29 +69,8 @@ const login = async (req, res) => {
 };
 
 const session_check = async (req, res) => {
-  // const authCooki = req.headers.authorization;
-  // if (!authHeader || !authHeader.startsWith("Bearer")) {
-  //   return res
-  //     .status(StatusCodes.UNAUTHORIZED)
-  //     .json({ message: "Token Invalid, please login again" });
-  // }
-  // const token = authHeader.split(" ")[1];
-  // console.log(token);
-
-  // try {
-  //   const verfiy_jwt = jwt.verify(token, process.env.JWT_SECRET);
-  //   res.status(StatusCodes.OK).json({
-  //     message: "authorized",
-  //     userId: verfiy_jwt.userId,
-  //     name: verfiy_jwt.name,
-  //   });
-  // } catch (error) {
-  //   res
-  //     .status(StatusCodes.UNAUTHORIZED)
-  //     .json({ message: "Invalid Authenticatoin" });
-  // }
-
-  const authCookie = req.cookies["authCookie"];
+  const authCookie = req.cookies["token"];
+  console.log(authCookie);
   if (authCookie == null) {
     return res
       .status(StatusCodes.UNAUTHORIZED)
@@ -76,14 +81,12 @@ const session_check = async (req, res) => {
     req.userId = verfiy_jwt.userId;
     req.userName = verfiy_jwt.name;
     res.status(StatusCodes.OK).json({
-      msg: {
-        userId: verfiy_jwt.userId,
-        userName: verfiy_jwt.userName,
-      },
+      message: "authorized",
+      userId: verfiy_jwt.userId,
+      name: verfiy_jwt.name,
     });
-    next();
   } catch (error) {
-    res.status(StatusCodes.UNAUTHORIZED).json({ msg: "invalid token" });
+    res.status(StatusCodes.UNAUTHORIZED).re({ msg: "invalid token" });
   }
 };
 
