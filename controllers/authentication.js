@@ -78,15 +78,11 @@ const session_check = async (req, res) => {
   }
   try {
     const verfiy_jwt = jwt.verify(authCookie, process.env.JWT_SECRET);
-    req.userId = verfiy_jwt.userId;
-    req.userName = verfiy_jwt.name;
-    res.status(StatusCodes.OK).json({
-      message: "authorized",
-      userId: verfiy_jwt.userId,
-      name: verfiy_jwt.name,
-    });
+    const { userId, name } = verfiy_jwt;
+    req.user = { userId, name };
+    next();
   } catch (error) {
-    res.status(StatusCodes.UNAUTHORIZED).re({ msg: "invalid token" });
+    res.status(StatusCodes.UNAUTHORIZED).json({ msg: "invalid token" });
   }
 };
 

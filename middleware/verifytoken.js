@@ -2,8 +2,9 @@ const jwt = require("jsonwebtoken");
 const { StatusCodes } = require("http-status-codes");
 require("dotenv").config();
 
-const auth = async (req, res, next) => {
-  const authCookie = req.cookies["authCookie"];
+const auth_checker = async (req, res, next) => {
+  const authCookie = req.cookies["token"];
+  console.log(authCookie);
   if (authCookie == null) {
     return res
       .status(StatusCodes.UNAUTHORIZED)
@@ -11,12 +12,14 @@ const auth = async (req, res, next) => {
   }
   try {
     const verfiy_jwt = jwt.verify(authCookie, process.env.JWT_SECRET);
-    req.userId = verfiy_jwt.userId;
-    req.userName = verfiy_jwt.name;
+    const { userId, name } = verfiy_jwt;
+    req.user = { userId, name };
     next();
   } catch (error) {
-    res.status(StatusCodes.UNAUTHORIZED).json({ msg: "invalid token" });
+    res
+      .status(StatusCodes.UNAUTHORIZED)
+      .json({ msg: "authentication invalid" });
   }
 };
 
-module.exports = auth;
+module.exports = auth_checker;
