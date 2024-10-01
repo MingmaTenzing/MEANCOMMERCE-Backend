@@ -68,22 +68,10 @@ const login = async (req, res) => {
   }
 };
 
-const session_check = async (req, res) => {
-  const authCookie = req.cookies["token"];
-  console.log(authCookie);
-  if (authCookie == null) {
-    return res
-      .status(StatusCodes.UNAUTHORIZED)
-      .json({ msg: "user unauthorized" });
-  }
-  try {
-    const verfiy_jwt = jwt.verify(authCookie, process.env.JWT_SECRET);
-    const { userId, name } = verfiy_jwt;
-    req.user = { userId, name };
-    next();
-  } catch (error) {
-    res.status(StatusCodes.UNAUTHORIZED).json({ msg: "invalid token" });
-  }
+const sign_out = async (req, res, next) => {
+  res.clearCookie("token");
+
+  res.status(StatusCodes.OK).json({ msg: "cookies cleared" });
 };
 
-module.exports = { register, login, session_check };
+module.exports = { register, login, sign_out };
