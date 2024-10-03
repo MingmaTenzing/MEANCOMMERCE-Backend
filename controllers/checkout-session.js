@@ -31,10 +31,18 @@ const sessionStatus = async (req, res) => {
     const session = await stripe.checkout.sessions.retrieve(
       req.query.session_id
     );
+    const line_items = await stripe.checkout.sessions.listLineItems(
+      req.query.session_id
+    );
+    const { data } = line_items;
+    console.log(data);
     res.status(StatusCodes.OK).json({
       status: session.status,
+
       customer_email: session.customer_details.email,
       customer_name: session.customer_details.name,
+      id: session.id,
+      payment_intent: session.payment_intent,
     });
   } catch (error) {
     res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ message: error });

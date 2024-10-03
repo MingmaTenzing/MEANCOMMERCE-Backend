@@ -1,10 +1,10 @@
-const product = require("../models/product");
 const Product = require("../models/product");
 const { StatusCodes } = require("http-status-codes");
 
 const getAllProducts = async (req, res) => {
   const page = req.query.page;
   const limit = req.query.limit;
+
   try {
     console.log(page, limit);
     const products = await Product.find({})
@@ -18,7 +18,6 @@ const getAllProducts = async (req, res) => {
 };
 
 const shopProducts = async (req, res) => {
-  console.log(req.body);
   try {
     const products = await Product.find(req.body);
 
