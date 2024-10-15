@@ -23,6 +23,7 @@ const categoriesRoute = require("./routes/categories");
 const checkoutRoute = require("./routes/checkout");
 const auth_route = require("./routes/auth");
 const dashboard_route = require("./routes/dashboard");
+const order_router = require("./routes/recent_orders");
 //port
 const port = 5000;
 
@@ -34,6 +35,7 @@ app.use("/api/v1/products", productsRoute);
 app.use("/api/v1/checkout", auth_checker, checkoutRoute);
 app.use("/api/v1/dashboard", auth_checker, dashboard_route);
 app.use("/api/v1/auth", auth_route);
+app.use("/api/v1/orders", auth_checker, order_router);
 
 const start = async () => {
   try {
