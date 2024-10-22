@@ -74,4 +74,29 @@ const sign_out = async (req, res, next) => {
   res.status(StatusCodes.OK).json({ msg: "cookies cleared" });
 };
 
-module.exports = { register, login, sign_out };
+const check_auth_sesion = async (req, res) => {
+  const authCookie = req.cookies["token"];
+  console.log(authCookie);
+  if (authCookie == null) {
+    return res
+      .status(StatusCodes.UNAUTHORIZED)
+      .json({ message: "user unauthorized" });
+  }
+  try {
+    const verfiy_jwt = jwt.verify(authCookie, process.env.JWT_SECRET);
+    if (verfiy_jwt) {
+      return res.status(StatusCodes.OK).json({
+        message: {
+          userId: verfiy_jwt.userId,
+          userName: verfiy_jwt.name,
+        },
+      });
+    }
+  } catch (error) {
+    res
+      .status(StatusCodes.UNAUTHORIZED)
+      .json({ message: "authentication invalid" });
+  }
+};
+
+module.exports = { register, login, sign_out, check_auth_sesion };

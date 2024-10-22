@@ -51,24 +51,10 @@ const sessionStatus = async (req, res) => {
     });
 
     console.log(saveOrder);
-    // const { receipt_url } = charge;
-    // const { data } = line_items;
-    // console.log(data);
 
-    // console.log(paymentIntent);
-    // console.log(receipt_url);
+    console.log(paymentIntent);
+    console.log(session);
 
-    // console.log({
-    //   status: session.status,
-
-    //   customer_email: session.customer_details.email,
-    //   customer_name: session.customer_details.name,
-    //   id: session.id,
-    //   payment_intent: session.payment_intent,
-    //   amount_subtotal: session.amount_subtotal,
-    //   amount_total: session.amount_total,
-    //   receipt: session.url,
-    // });
     res.status(StatusCodes.OK).json({
       status: session.status,
 
