@@ -2,6 +2,7 @@ const { StatusCodes } = require("http-status-codes");
 
 const stripe_secret = process.env.STRIPE_SECRET_KEY;
 const stripe = require("stripe")(stripe_secret);
+const Order = require("../models/order");
 
 const checkoutSession = async (req, res) => {
   const { line_items } = req.body;
@@ -31,11 +32,29 @@ const sessionStatus = async (req, res) => {
     const session = await stripe.checkout.sessions.retrieve(
       req.query.session_id
     );
-    const line_items = await stripe.checkout.sessions.listLineItems(
-      req.query.session_id
+
+    const paymentIntent = await stripe.paymentIntents.retrieve(
+      session.payment_intent
     );
-    const { data } = line_items;
-    console.log(data);
+
+    const charge = await stripe.charges.retrieve(paymentIntent.latest_charge);
+
+    const saveOrder = await Order.create({
+      user_id: req.user.userId,
+      paymend_intent: session.payment_intent,
+      charge_id: paymentIntent.latest_charge,
+      total_amount: session.amount_total,
+      customer_email: session.customer_details.email,
+      customer_name: session.customer_details.name,
+      status: session.status,
+      receipt_url: charge.receipt_url,
+    });
+
+    console.log(saveOrder);
+
+    console.log(paymentIntent);
+    console.log(session);
+
     res.status(StatusCodes.OK).json({
       status: session.status,
 
@@ -43,6 +62,8 @@ const sessionStatus = async (req, res) => {
       customer_name: session.customer_details.name,
       id: session.id,
       payment_intent: session.payment_intent,
+      amount_subtotal: session.amount_subtotal,
+      amount_total: session.amount_total,
     });
   } catch (error) {
     res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ message: error });

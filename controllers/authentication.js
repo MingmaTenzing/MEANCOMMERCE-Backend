@@ -39,11 +39,11 @@ const login = async (req, res) => {
     if (!user) {
       return res
         .status(StatusCodes.NOT_FOUND)
-        .json({ message: "user not found please register first" });
+        .json("user not found please register first");
     }
     const matchPassword = await user.comparePassword(password);
     if (!matchPassword) {
-      return res.status(StatusCodes.UNAUTHORIZED).json("invalid credentials");
+      return res.status(StatusCodes.BAD_REQUEST).json("invalid credentials");
     } else {
       const token = user.createJWT();
       res.cookie("token", token, {
@@ -71,7 +71,28 @@ const login = async (req, res) => {
 const sign_out = async (req, res, next) => {
   res.clearCookie("token");
 
-  res.status(StatusCodes.OK).json({ msg: "cookies cleared" });
+  res.status(StatusCodes.OK).json("cookies cleared");
 };
 
-module.exports = { register, login, sign_out };
+const check_auth_sesion = async (req, res) => {
+  const authCookie = req.cookies["token"];
+  console.log(authCookie);
+  if (authCookie == null) {
+    return res.status(StatusCodes.UNAUTHORIZED).json("user unauthorized");
+  }
+  try {
+    const verfiy_jwt = jwt.verify(authCookie, process.env.JWT_SECRET);
+    if (verfiy_jwt) {
+      return res.status(StatusCodes.OK).json({
+        message: {
+          userId: verfiy_jwt.userId,
+          userName: verfiy_jwt.name,
+        },
+      });
+    }
+  } catch (error) {
+    res.status(StatusCodes.UNAUTHORIZED).json("authentication invalid");
+  }
+};
+
+module.exports = { register, login, sign_out, check_auth_sesion };
