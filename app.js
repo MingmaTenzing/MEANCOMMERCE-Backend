@@ -12,6 +12,8 @@ const corsOptions = {
   credentials: true,
 };
 
+const { upload } = require("./multer-config/multer-config");
+
 app.use(cors(corsOptions));
 app.use(cookieParser());
 app.use(express.json());
@@ -24,6 +26,7 @@ const checkoutRoute = require("./routes/checkout");
 const auth_route = require("./routes/auth");
 const dashboard_route = require("./routes/dashboard");
 const order_router = require("./routes/recent_orders");
+const image_upload_route = require("./routes/upload-image");
 //port
 const port = 5000;
 
@@ -36,6 +39,7 @@ app.use("/api/v1/checkout", auth_checker, checkoutRoute);
 app.use("/api/v1/dashboard", auth_checker, dashboard_route);
 app.use("/api/v1/auth", auth_route);
 app.use("/api/v1/orders", auth_checker, order_router);
+app.use("/api/v1/upload-image", upload.single("image"), image_upload_route);
 
 const start = async () => {
   try {
