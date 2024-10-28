@@ -8,18 +8,21 @@ cloudinary.config({
 });
 
 const uploadImage = async (req, res) => {
-  if (req.file) {
-    const file = dataUri(req).content;
-    return cloudinary.uploader
-      .upload(file)
-      .then((result) => {
-        const image = result.url;
-        return res.status(StatusCodes.OK).json(image);
-      })
-      .catch((error) =>
-        res.status(StatusCodes.INTERNAL_SERVER_ERROR).json(error)
-      );
-  }
+  console.log(req.file);
+
+  res.status(StatusCodes.OK).json("working uploading");
+  // if (req.file) {
+  //   const file = dataUri(req).content;
+  //   return cloudinary.uploader
+  //     .upload(file)
+  //     .then((result) => {
+  //       const image = result.url;
+  //       return res.status(StatusCodes.OK).json(image);
+  //     })
+  //     .catch((error) =>
+  //       res.status(StatusCodes.INTERNAL_SERVER_ERROR).json(error)
+  //     );
+  // }
   //   console.log(req.file);
   //   try {
   //     const result = await cloudinary.uploader.upload(req.file, {});
