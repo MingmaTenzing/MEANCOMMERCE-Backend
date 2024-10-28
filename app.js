@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const auth_checker = require("./middleware/verifytoken");
+const fileUpload = require("express-fileupload");
 require("dotenv").config();
 // cors options
 const corsOptions = {
@@ -12,12 +13,13 @@ const corsOptions = {
   credentials: true,
 };
 
-const { upload } = require("./multer-config/multer-config");
-
 app.use(cors(corsOptions));
 app.use(cookieParser());
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+
+//express-file upload middleware
+app.use(fileUpload({ useTempFiles: true }));
 
 //routes
 const productsRoute = require("./routes/products");
@@ -39,7 +41,7 @@ app.use("/api/v1/checkout", auth_checker, checkoutRoute);
 app.use("/api/v1/dashboard", auth_checker, dashboard_route);
 app.use("/api/v1/auth", auth_route);
 app.use("/api/v1/orders", auth_checker, order_router);
-app.use("/api/v1/upload-image", upload.single("image"), image_upload_route);
+app.use("/api/v1/upload-image", image_upload_route);
 
 const start = async () => {
   try {
