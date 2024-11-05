@@ -8,6 +8,11 @@ cloudinary.config({
 });
 
 const uploadImage = async (req, res) => {
+  if (!req.files) {
+    return res
+      .status(StatusCodes.BAD_REQUEST)
+      .json("please provide the image first");
+  }
   try {
     const result = await cloudinary.uploader.upload(
       req.files.image.tempFilePath,

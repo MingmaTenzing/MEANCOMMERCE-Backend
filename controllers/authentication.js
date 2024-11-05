@@ -83,11 +83,10 @@ const check_auth_sesion = async (req, res) => {
   try {
     const verfiy_jwt = jwt.verify(authCookie, process.env.JWT_SECRET);
     if (verfiy_jwt) {
+      console.log(verfiy_jwt.name, verfiy_jwt.userId);
       return res.status(StatusCodes.OK).json({
-        message: {
-          userId: verfiy_jwt.userId,
-          userName: verfiy_jwt.name,
-        },
+        userId: verfiy_jwt.userId,
+        userName: verfiy_jwt.name,
       });
     }
   } catch (error) {
