@@ -30,7 +30,7 @@ const dashboard_route = require("./routes/dashboard");
 const order_router = require("./routes/recent_orders");
 const image_upload_route = require("./routes/upload-image");
 //port
-const port = 5000;
+const port = process.env.PORT;
 
 //DB
 const connectDB = require("./db/connect");
