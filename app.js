@@ -6,6 +6,11 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const auth_checker = require("./middleware/verifytoken");
 const fileUpload = require("express-fileupload");
+
+const allowedOrigins = [
+  "http://localhost:4200",
+  "https://meancommerce.vercel.app/",
+];
 require("dotenv").config();
 // cors options
 const corsOptions = {
