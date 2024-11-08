@@ -9,7 +9,7 @@ const fileUpload = require("express-fileupload");
 require("dotenv").config();
 // cors options
 const corsOptions = {
-  origin: ["http://localhost:4200", "https://meancommerce.vercel.app/"],
+  origin: process.env.ORIGIN,
   credentials: true,
 };
 
