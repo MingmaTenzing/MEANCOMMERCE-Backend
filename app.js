@@ -14,7 +14,7 @@ const allowedOrigins = [
 require("dotenv").config();
 // cors options
 const corsOptions = {
-  origin: "*",
+  origin: ["https://meancommerce.vercel.app"],
   credentials: true,
 };
 
