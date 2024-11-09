@@ -16,9 +16,9 @@ const register = async (req, res) => {
       // domain = what domain the cookie is valid on
 
       // secure = only send cookie over https
-      secure: false,
+      secure: true,
       // sameSite = only send cookie if the request is coming from the same origin
-      sameSite: "lax", // "strict" | "lax" | "none" (secure must be true)
+      sameSite: "none", // "strict" | "lax" | "none" (secure must be true)
       // maxAge = how long the cookie is valid for in milliseconds
       maxAge: 86400000, // 24 hour
     });
@@ -35,6 +35,7 @@ const register = async (req, res) => {
 const login = async (req, res) => {
   try {
     const { email, password } = req.body;
+    console.log(email, password);
     const user = await User.findOne({ email });
     if (!user) {
       return res
@@ -54,9 +55,9 @@ const login = async (req, res) => {
         // domain = what domain the cookie is valid on
 
         // secure = only send cookie over https
-        secure: false,
+        secure: true,
         // sameSite = only send cookie if the request is coming from the same origin
-        sameSite: "lax", // "strict" | "lax" | "none" (secure must be true)
+        sameSite: "none", // "strict" | "lax" | "none" (secure must be true)
         // maxAge = how long the cookie is valid for in milliseconds
         maxAge: 86400000, // 24 hour
       });
