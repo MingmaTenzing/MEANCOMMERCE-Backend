@@ -9,12 +9,12 @@ const fileUpload = require("express-fileupload");
 
 const allowedOrigins = [
   "http://localhost:4200",
-  "https://meancommerce.vercel.app/",
+  "https://meancommerce.vercel.app",
 ];
 require("dotenv").config();
 // cors options
 const corsOptions = {
-  origin: ["https://meancommerce.vercel.app"],
+  origin: allowedOrigins,
   credentials: true,
 };
 
