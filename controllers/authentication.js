@@ -48,18 +48,10 @@ const login = async (req, res) => {
     } else {
       const token = user.createJWT();
       res.cookie("token", token, {
-        // can only be accessed by server requests
-        httpOnly: false,
-        // path = where the cookie is valid
+        httpOnly: true,
         path: "/",
-        // domain = what domain the cookie is valid on
-
-        // secure = only send cookie over https
         secure: true,
-        // sameSite = only send cookie if the request is coming from the same origin
-        sameSite: "none", // "strict" | "lax" | "none" (secure must be true)
-        // maxAge = how long the cookie is valid for in milliseconds
-        maxAge: 86400000, // 24 hour
+        sameSite: "none",
       });
       res.status(StatusCodes.OK).json({ user });
     }
@@ -70,7 +62,12 @@ const login = async (req, res) => {
 };
 
 const sign_out = async (req, res, next) => {
-  res.clearCookie("token");
+  res.clearCookie("token", {
+    httpOnly: true,
+    path: "/",
+    secure: true,
+    sameSite: "none",
+  });
 
   res.status(StatusCodes.OK).json("cookies cleared");
 };
