@@ -75,6 +75,7 @@ const sign_out = async (req, res, next) => {
 const check_auth_sesion = async (req, res) => {
   const authCookie = req.cookies["token"];
   console.log(authCookie);
+
   if (authCookie == null) {
     return res.status(StatusCodes.UNAUTHORIZED).json("user unauthorized");
   }

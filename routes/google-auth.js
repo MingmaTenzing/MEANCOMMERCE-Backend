@@ -2,6 +2,8 @@ const express = require("express");
 const passport = require("passport");
 const router = express.Router();
 
+const GoogleStrategy = require("passport-google-oidc");
+
 require("../utils/passport");
 
 router.route("/").get(passport.authenticate("google"));
@@ -11,7 +13,7 @@ router.route("/redirect").get(
     failureRedirect: "/",
   }),
   (req, res) => {
-    res.send("user succesfful");
+    res.send(req.user);
   }
 );
 
