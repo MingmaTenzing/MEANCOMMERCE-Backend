@@ -17,8 +17,8 @@ passport.use(
       const email = profile.emails[0].value;
       const profilePicture = profile.photos[0].value;
 
-      const user = await User.findOne({ email });
-      if (!user) {
+      const currentUser = await User.findOne({ email });
+      if (!currentUser) {
         const newUser = new User({
           email: email,
           profile_image: profilePicture,
@@ -27,15 +27,15 @@ passport.use(
 
         return done(null, newUser);
       }
+      return done(null, currentUser);
     })
   )
 );
 
 passport.serializeUser((user, done) => {
-  done(null, user._id);
+  done(null, { userId: user._id, name: user.user_name });
 });
 
-passport.deserializeUser(async (_id, done) => {
-  const currentUser = await User.findOne({ _id });
-  done(null, currentUser);
+passport.deserializeUser((user, done) => {
+  done(null, user);
 });

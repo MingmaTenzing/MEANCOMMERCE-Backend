@@ -4,8 +4,9 @@ require("dotenv").config();
 
 const auth_checker = async (req, res, next) => {
   const authCookie = req.cookies["token"];
-  console.log(authCookie);
-  if (authCookie == null) {
+
+  console.log(req.user);
+  if (authCookie == null || !req.user) {
     return res
       .status(StatusCodes.UNAUTHORIZED)
       .json({ msg: "user unauthorized" });

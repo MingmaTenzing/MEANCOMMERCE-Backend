@@ -13,7 +13,9 @@ router.route("/redirect").get(
     failureRedirect: "/",
   }),
   (req, res) => {
-    res.send(req.user);
+    console.log(req.user);
+    res.redirect("http://localhost:4200");
+    res.json(req.user);
   }
 );
 
