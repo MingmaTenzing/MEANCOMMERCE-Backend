@@ -24,8 +24,7 @@ require("dotenv").config();
 
 const auth_checker = async (req, res, next) => {
   const authCookie = req.cookies["token"];
-  console.log(req.user);
-  console.log(authCookie);
+  console.log(authCookie, req.user);
 
   if (req.user) {
     next();

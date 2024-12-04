@@ -23,7 +23,9 @@ passport.use(
           email: email,
           profile_image: profilePicture,
           user_name: name,
+          password: email + " " + name + "_",
         });
+        await newUser.save();
 
         return done(null, newUser);
       }
