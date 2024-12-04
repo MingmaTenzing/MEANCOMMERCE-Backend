@@ -61,7 +61,12 @@ const login = async (req, res) => {
   }
 };
 
-const sign_out = async (req, res, next) => {
+const sign_out = async (req, res) => {
+  req.logout(function (err) {
+    if (err) {
+      return next(err);
+    }
+  });
   res.clearCookie("token", {
     httpOnly: true,
     path: "/",
@@ -74,22 +79,28 @@ const sign_out = async (req, res, next) => {
 
 const check_auth_sesion = async (req, res) => {
   const authCookie = req.cookies["token"];
+  console.log(req.user);
   console.log(authCookie);
-  if (authCookie == null) {
-    return res.status(StatusCodes.UNAUTHORIZED).json("user unauthorized");
-  }
-  try {
-    const verfiy_jwt = jwt.verify(authCookie, process.env.JWT_SECRET);
-    if (verfiy_jwt) {
-      console.log(verfiy_jwt.name, verfiy_jwt.userId);
-      return res.status(StatusCodes.OK).json({
-        userId: verfiy_jwt.userId,
-        userName: verfiy_jwt.name,
-      });
+
+  if (req.user) {
+    return res.status(StatusCodes.OK).json({
+      userId: req.user.userId,
+      userName: req.user.name,
+    });
+  } else if (authCookie) {
+    try {
+      const verfiy_jwt = jwt.verify(authCookie, process.env.JWT_SECRET);
+      if (verfiy_jwt) {
+        return res.status(StatusCodes.OK).json({
+          userId: verfiy_jwt.userId,
+          userName: verfiy_jwt.name,
+        });
+      }
+    } catch (error) {
+      res.status(StatusCodes.UNAUTHORIZED).json("authentication invalid");
     }
-  } catch (error) {
-    res.status(StatusCodes.UNAUTHORIZED).json("authentication invalid");
   }
+  return res.status(StatusCodes.UNAUTHORIZED).json("user unauthorized");
 };
 
 module.exports = { register, login, sign_out, check_auth_sesion };

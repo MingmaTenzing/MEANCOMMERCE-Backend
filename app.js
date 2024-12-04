@@ -6,17 +6,31 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const auth_checker = require("./middleware/verifytoken");
 const fileUpload = require("express-fileupload");
+const session = require("express-session");
+const passport = require("passport");
 
 const allowedOrigins = [
   "http://localhost:4200",
   "https://meancommerce.vercel.app",
 ];
+
 require("dotenv").config();
+
 // cors options
 const corsOptions = {
   origin: allowedOrigins,
   credentials: true,
 };
+app.use(
+  session({
+    resave: false,
+    saveUninitialized: false,
+    secret: "ming secret",
+  })
+);
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use(cors(corsOptions));
 app.use(cookieParser());
@@ -34,6 +48,7 @@ const auth_route = require("./routes/auth");
 const dashboard_route = require("./routes/dashboard");
 const order_router = require("./routes/recent_orders");
 const image_upload_route = require("./routes/upload-image");
+
 //port
 const port = process.env.PORT;
 
