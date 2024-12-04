@@ -61,7 +61,12 @@ const login = async (req, res) => {
   }
 };
 
-const sign_out = async (req, res, next) => {
+const sign_out = async (req, res) => {
+  req.logout(function (err) {
+    if (err) {
+      return next(err);
+    }
+  });
   res.clearCookie("token", {
     httpOnly: true,
     path: "/",

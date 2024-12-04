@@ -48,7 +48,6 @@ const auth_route = require("./routes/auth");
 const dashboard_route = require("./routes/dashboard");
 const order_router = require("./routes/recent_orders");
 const image_upload_route = require("./routes/upload-image");
-const google_auth_route = require("./routes/google-auth.js");
 
 //port
 const port = process.env.PORT;
@@ -59,12 +58,10 @@ const connectDB = require("./db/connect");
 app.use("/api/v1/categories", categoriesRoute);
 app.use("/api/v1/products", productsRoute);
 app.use("/api/v1/checkout", auth_checker, checkoutRoute);
-app.use("/api/v1/dashboard", dashboard_route);
+app.use("/api/v1/dashboard", auth_checker, dashboard_route);
 app.use("/api/v1/auth", auth_route);
 app.use("/api/v1/orders", auth_checker, order_router);
 app.use("/api/v1/upload-image", image_upload_route);
-
-app.use("/auth/google", google_auth_route);
 
 const start = async () => {
   try {
