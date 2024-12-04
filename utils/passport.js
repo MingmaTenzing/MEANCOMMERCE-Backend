@@ -9,7 +9,7 @@ passport.use(
     {
       clientID: google_client_id,
       clientSecret: google_client_secret,
-      callbackURL: "http://localhost:3000/api/v1/auth/google/redirect",
+      callbackURL: `${process.env.HOST}/api/v1/auth/google/redirect`,
       scope: ["profile", "email"],
     },
     (authUser = async (request, accessToken, refreshToken, profile, done) => {
