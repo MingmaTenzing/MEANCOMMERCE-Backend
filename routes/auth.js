@@ -21,7 +21,7 @@ router.route("/google/redirect").get(
     failureRedirect: "/",
   }),
   (req, res) => {
-    res.redirect(process.env.HOST);
+    res.redirect(process.env.FRONTEND);
   }
 );
 
