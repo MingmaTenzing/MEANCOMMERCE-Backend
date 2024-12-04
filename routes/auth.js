@@ -21,7 +21,6 @@ router.route("/google/redirect").get(
     failureRedirect: "/",
   }),
   (req, res) => {
-    console.log(req.user);
     res.redirect("http://localhost:4200");
   }
 );
