@@ -50,10 +50,7 @@ const sessionStatus = async (req, res) => {
       receipt_url: charge.receipt_url,
     });
 
-    console.log(saveOrder);
 
-    console.log(paymentIntent);
-    console.log(session);
 
     res.status(StatusCodes.OK).json({
       status: session.status,

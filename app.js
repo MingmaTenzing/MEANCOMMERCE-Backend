@@ -59,7 +59,7 @@ const connectDB = require("./db/connect");
 app.use("/api/v1/categories", categoriesRoute);
 app.use("/api/v1/products", productsRoute);
 app.use("/api/v1/checkout", auth_checker, checkoutRoute);
-app.use("/api/v1/dashboard", auth_checker, dashboard_route);
+app.use("/api/v1/dashboard", dashboard_route);
 app.use("/api/v1/auth", auth_route);
 app.use("/api/v1/orders", auth_checker, order_router);
 app.use("/api/v1/upload-image", image_upload_route);

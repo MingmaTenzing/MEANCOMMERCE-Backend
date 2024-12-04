@@ -28,7 +28,6 @@ const shopProducts = async (req, res) => {
 };
 
 const getCategoryProducts = async (req, res) => {
-  console.log(req.body);
   try {
     const products = await Product.find(req.body);
     res.status(StatusCodes.OK).json(products);
@@ -38,7 +37,6 @@ const getCategoryProducts = async (req, res) => {
 };
 const getSingleProduct = async (req, res) => {
   const productId = req.params.id;
-  console.log(productId);
 
   if (!productId) {
     res

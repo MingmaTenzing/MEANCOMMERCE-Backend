@@ -15,7 +15,6 @@ router.route("/redirect").get(
   (req, res) => {
     console.log(req.user);
     res.redirect("http://localhost:4200");
-    res.json(req.user);
   }
 );
 
