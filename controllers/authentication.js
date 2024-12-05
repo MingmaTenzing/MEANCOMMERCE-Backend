@@ -79,9 +79,8 @@ const sign_out = async (req, res) => {
 
 const check_auth_sesion = async (req, res) => {
   const authCookie = req.cookies["token"];
-  console.log(req.user);
-  console.log(authCookie);
 
+  console.log(authCookie, req.user);
   if (req.user) {
     return res.status(StatusCodes.OK).json({
       userId: req.user.userId,
@@ -99,8 +98,9 @@ const check_auth_sesion = async (req, res) => {
     } catch (error) {
       res.status(StatusCodes.UNAUTHORIZED).json("authentication invalid");
     }
+  } else {
+    return res.status(StatusCodes.UNAUTHORIZED).json("user unauthorized");
   }
-  return res.status(StatusCodes.UNAUTHORIZED).json("user unauthorized");
 };
 
 module.exports = { register, login, sign_out, check_auth_sesion };
