@@ -26,6 +26,7 @@ app.use(
     resave: false,
     saveUninitialized: false,
     secret: "ming secret",
+    cookie: { secure: true },
   })
 );
 
