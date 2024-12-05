@@ -30,6 +30,7 @@ app.use(
       secure: true,
       sameSite: "none",
     },
+    proxy: true,
   })
 );
 
