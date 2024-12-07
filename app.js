@@ -53,6 +53,7 @@ const auth_route = require("./routes/auth");
 const dashboard_route = require("./routes/dashboard");
 const order_router = require("./routes/recent_orders");
 const image_upload_route = require("./routes/upload-image");
+const open_ai_route = require("./routes/compare");
 
 //port
 const port = process.env.PORT;
@@ -67,6 +68,7 @@ app.use("/api/v1/dashboard", auth_checker, dashboard_route);
 app.use("/api/v1/auth", auth_route);
 app.use("/api/v1/orders", auth_checker, order_router);
 app.use("/api/v1/upload-image", image_upload_route);
+app.use("/api/v1/compare", open_ai_route);
 
 const start = async () => {
   try {
