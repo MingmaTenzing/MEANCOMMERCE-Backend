@@ -8,7 +8,7 @@ const auth_checker = require("./middleware/verifytoken");
 const fileUpload = require("express-fileupload");
 const session = require("express-session");
 const passport = require("passport");
-
+const memoryStore = require("memorystore")(session);
 const allowedOrigins = [
   "http://localhost:4200",
   "https://meancommerce.vercel.app",
@@ -30,6 +30,9 @@ app.use(
       secure: true,
       sameSite: "none",
     },
+    store: new memoryStore({
+      checkPeriod: 86400000,
+    }),
     proxy: true,
   })
 );
