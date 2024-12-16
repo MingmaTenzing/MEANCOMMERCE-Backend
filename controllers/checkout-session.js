@@ -41,7 +41,7 @@ const sessionStatus = async (req, res) => {
     );
 
     const charge = await stripe.charges.retrieve(paymentIntent.latest_charge);
-
+    console.log(session);
     const saveOrder = new Order({
       user_id: req.user.userId,
       line_items: session.line_items,
