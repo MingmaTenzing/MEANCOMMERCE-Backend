@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
 const order_schema = new mongoose.Schema({
+  line_items: Array,
   user_id: String,
   paymend_intent: String,
   charge_id: String,
