@@ -30,10 +30,7 @@ const checkoutSession = async (req, res) => {
 const sessionStatus = async (req, res) => {
   try {
     const session = await stripe.checkout.sessions.retrieve(
-      req.query.session_id,
-      {
-        expand: ["line_items"],
-      }
+      req.query.session_id
     );
 
     const paymentIntent = await stripe.paymentIntents.retrieve(
@@ -41,11 +38,28 @@ const sessionStatus = async (req, res) => {
     );
 
     const charge = await stripe.charges.retrieve(paymentIntent.latest_charge);
-    console.log(session);
+
+    const lineItems = await stripe.checkout.sessions.listLineItems(
+      req.query.session_id
+    );
+
+    const lineItem_withImages = await Promise.all(
+      lineItems.data.map(async (item) => {
+        const product = await stripe.products.retrieve(item.price.product);
+        return {
+          name: item.description,
+          quantity: item.quantity,
+          price: item.price.unit_amount,
+          currency: item.price.currency,
+          images: product.images,
+        };
+      })
+    );
+
     const saveOrder = new Order({
       user_id: req.user.userId,
-      line_items: session.line_items,
-      paymend_intent: session.payment_intent,
+      line_items: lineItem_withImages,
+      payment_intent: session.payment_intent,
       charge_id: paymentIntent.latest_charge,
       total_amount: session.amount_total,
       customer_email: session.customer_details.email,
@@ -57,7 +71,7 @@ const sessionStatus = async (req, res) => {
 
     res.status(StatusCodes.OK).json({
       status: session.status,
-      line_items: session.line_items,
+      line_items: lineItem_withImages,
       customer_email: session.customer_details.email,
       customer_name: session.customer_details.name,
       id: session.id,
