@@ -19,7 +19,7 @@ const get_order_details = async (req, res) => {
   }
   try {
     const findOrder_details = await Orders.find({ _id: req.query.order_id });
-    res.status(StatusCodes.OK).json(findOrder_details);
+    res.status(StatusCodes.OK).json(findOrder_details[0]);
   } catch (error) {
     res.status(StatusCodes.INTERNAL_SERVER_ERROR).json(error);
   }
