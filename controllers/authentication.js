@@ -8,7 +8,7 @@ const register = async (req, res) => {
     console.log(req.body);
     await user.save();
     const token = user.createJWT();
-    res.cookie("token", token, {
+    rtes.cookie("token", token, {
       // can only be accessed by server requests
       httpOnly: false,
       // path = where the cookie is valid
@@ -19,7 +19,7 @@ const register = async (req, res) => {
       secure: true,
       // sameSite = only send cookie if the request is coming from the same origin
       sameSite: "none", // "strict" | "lax" | "none" (secure must be true)
-      // maxAge = how long the cookie is valid for in milliseconds
+      // maxAge = how long he cookie is valid for in milliseconds
       maxAge: 86400000, // 24 hour
     });
     res.status(StatusCodes.CREATED).json({
@@ -81,12 +81,8 @@ const check_auth_sesion = async (req, res) => {
   const authCookie = req.cookies["token"];
 
   console.log(authCookie, req.user);
-  if (req.user) {
-    return res.status(StatusCodes.OK).json({
-      userId: req.user.userId,
-      userName: req.user.name,
-    });
-  } else if (authCookie) {
+
+  if (authCookie) {
     try {
       const verfiy_jwt = jwt.verify(authCookie, process.env.JWT_SECRET);
       if (verfiy_jwt) {
@@ -98,9 +94,35 @@ const check_auth_sesion = async (req, res) => {
     } catch (error) {
       res.status(StatusCodes.UNAUTHORIZED).json("authentication invalid");
     }
+  } else if (req.user) {
+    return res.status(StatusCodes.OK).json({
+      userId: req.user.userId,
+      userName: req.user.name,
+    });
   } else {
     return res.status(StatusCodes.UNAUTHORIZED).json("user unauthorized");
   }
+
+  // if (req.user) {
+  //   return res.status(StatusCodes.OK).json({
+  //     userId: req.user.userId,
+  //     userName: req.user.name,
+  //   });
+  // } else if (authCookie) {
+  //   try {
+  //     const verfiy_jwt = jwt.verify(authCookie, process.env.JWT_SECRET);
+  //     if (verfiy_jwt) {
+  //       return res.status(StatusCodes.OK).json({
+  //         userId: verfiy_jwt.userId,
+  //         userName: verfiy_jwt.name,
+  //       });
+  //     }
+  //   } catch (error) {
+  //     res.status(StatusCodes.UNAUTHORIZED).json("authentication invalid");
+  //   }
+  // } else {
+  //   return res.status(StatusCodes.UNAUTHORIZED).json("user unauthorized");
+  // }
 };
 
 module.exports = { register, login, sign_out, check_auth_sesion };
