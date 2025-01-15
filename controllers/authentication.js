@@ -80,15 +80,15 @@ const sign_out = async (req, res) => {
 const check_auth_sesion = async (req, res) => {
   const authCookie = req.cookies["token"];
 
-  console.log(authCookie, req.user);
-
   if (authCookie) {
     try {
       const verfiy_jwt = jwt.verify(authCookie, process.env.JWT_SECRET);
       if (verfiy_jwt) {
+        const { userId, name } = verfiy_jwt;
+        req.user = { userId, name };
         return res.status(StatusCodes.OK).json({
-          userId: verfiy_jwt.userId,
-          userName: verfiy_jwt.name,
+          userId: req.user.userId,
+          userName: req.user.name,
         });
       }
     } catch (error) {
