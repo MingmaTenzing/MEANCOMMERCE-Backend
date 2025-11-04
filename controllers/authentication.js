@@ -8,7 +8,7 @@ const register = async (req, res) => {
     console.log(req.body);
     await user.save();
     const token = user.createJWT();
-    rtes.cookie("token", token, {
+    res.cookie("token", token, {
       // can only be accessed by server requests
       httpOnly: false,
       // path = where the cookie is valid
