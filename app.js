@@ -8,6 +8,7 @@ const auth_checker = require("./middleware/verifytoken");
 const fileUpload = require("express-fileupload");
 const session = require("express-session");
 const passport = require("passport");
+const MemoryStore = require("memorystore")(session);
 
 const allowedOrigins = [
   "http://localhost:4200",
@@ -30,6 +31,9 @@ app.use(
       secure: true,
       sameSite: "none",
     },
+    store: new MemoryStore({
+      checkPeriod: 86400000, // prune expired entries every 24h
+    }),
     proxy: true,
   })
 );
