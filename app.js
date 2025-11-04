@@ -8,6 +8,7 @@ const auth_checker = require("./middleware/verifytoken");
 const fileUpload = require("express-fileupload");
 const session = require("express-session");
 const passport = require("passport");
+const set_guest_user = require("./middleware/guest_user");
 const MemoryStore = require("memorystore")(session);
 
 const allowedOrigins = [
@@ -22,6 +23,9 @@ const corsOptions = {
   origin: allowedOrigins,
   credentials: true,
 };
+
+app.use(set_guest_user);
+
 app.use(
   session({
     resave: false,
@@ -73,6 +77,8 @@ app.use("/api/v1/auth", auth_route);
 app.use("/api/v1/orders", auth_checker, order_router);
 app.use("/api/v1/upload-image", image_upload_route);
 app.use("/api/v1/compare", open_ai_route);
+
+// set's guest user
 
 const start = async () => {
   try {
